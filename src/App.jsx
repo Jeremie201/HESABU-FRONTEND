@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Solutions from "./pages/Solutions";
@@ -13,6 +15,9 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <BrowserRouter>
+
+      <ScrollToTop />
+
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -34,6 +39,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
+
     </BrowserRouter>
   );
 }
