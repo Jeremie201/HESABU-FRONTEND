@@ -145,7 +145,7 @@ function Footer() {
               </p>
 
               <p>
-                🌐 www.hesaburdc.com
+                🌐 www.hesabudrc.com
               </p>
 
             </div>
