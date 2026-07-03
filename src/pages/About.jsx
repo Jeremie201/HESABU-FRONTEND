@@ -1,10 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import mapBg from "../assets/map-bg.png";
+import SEO from "../components/SEO";
 
 function About() {
   return (
     <>
+      <SEO
+        title="À propos de HESABU SARLU | Expert GPS et Gestion de Flotte en RDC"
+        description="Découvrez HESABU SARLU, entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT en République Démocratique du Congo."
+        keywords="HESABU SARLU, entreprise GPS RDC, gestion de flotte, télématique, IoT, géolocalisation, à propos"
+      />
       <Navbar />
 
       {/* HERO */}
