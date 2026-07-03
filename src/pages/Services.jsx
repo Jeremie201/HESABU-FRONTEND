@@ -2,10 +2,16 @@ import Navbar from "../components/Navbar";
 import ServicesSection from "../components/ServicesSection";
 import Footer from "../components/Footer";
 import mapBg from "../assets/map-bg.png";
+import SEO from "../components/SEO";
 
 function Services() {
   return (
     <>
+      <SEO
+        title="Services GPS, IoT et Télématique | HESABU SARLU"
+        description="Découvrez les services de HESABU SARLU : géolocalisation GPS, gestion intelligente de flotte, télématique embarquée, sécurité anti-vol, suivi de carburant et solutions IoT en République Démocratique du Congo."
+        keywords="services GPS RDC, gestion de flotte, télématique embarquée, suivi de véhicules, sécurité anti-vol, IoT RDC"
+      />
       <Navbar />
 
       {/* HERO SERVICES */}
