@@ -3,10 +3,16 @@ import SolutionsSection from "../components/SolutionsSection";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import mapBg from "../assets/map-bg.png";
+import SEO from "../components/SEO";
 
 function Solutions() {
   return (
     <>
+      <SEO
+        title="Solutions GPS et Gestion de Flotte | HESABU SARLU"
+        description="Découvrez les solutions GPS de HESABU SARLU pour les entreprises, transporteurs, gestionnaires de flotte et particuliers. Suivi en temps réel, sécurité, télématique embarquée et technologies IoT."
+        keywords="solutions GPS RDC, gestion de flotte, suivi de véhicules, géolocalisation GPS, IoT, télématique embarquée"
+      />
       <Navbar />
 
       {/* HERO SOLUTIONS */}
