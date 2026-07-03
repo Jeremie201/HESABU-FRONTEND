@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
 function StructuredData() {
-  const data = {
+  const organization = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-
+    "@type": "Organization",
     "@id": "https://hesabudrc.com/#organization",
 
     name: "HESABU SARLU",
@@ -13,14 +12,12 @@ function StructuredData() {
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image: "https://hesabudrc.com/favicon.png",
-
-    description:
-      "HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée, les technologies IoT et la sécurisation des véhicules en République Démocratique du Congo.",
+    email: "iot@hesabudrc.com",
 
     telephone: "+243839573532",
 
-    email: "iot@hesabudrc.com",
+    description:
+      "HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
 
     address: {
       "@type": "PostalAddress",
@@ -28,14 +25,7 @@ function StructuredData() {
         "11A3, Avenue Golf, Anciennes Galeries Présidentielles",
       addressLocality: "Gombe",
       addressRegion: "Kinshasa",
-      postalCode: "1003101",
       addressCountry: "CD",
-    },
-
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "",
-      longitude: "",
     },
 
     areaServed: {
@@ -43,39 +33,88 @@ function StructuredData() {
       name: "République Démocratique du Congo",
     },
 
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+243839573532",
-        contactType: "customer service",
-        areaServed: "CD",
-        availableLanguage: [
-          "French",
-          "English",
-        ],
-      },
-    ],
-
     sameAs: [],
+  };
 
-    knowsAbout: [
-      "GPS Tracking",
-      "Gestion de flotte",
-      "IoT",
-      "Télématique",
-      "Suivi de véhicules",
-      "Sécurité automobile",
-      "Tracking GPS",
-      "Fleet Management",
-      "Fuel Monitoring",
-      "Vehicle Tracking",
-    ],
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+
+    "@id": "https://hesabudrc.com/#website",
+
+    url: "https://hesabudrc.com",
+
+    name: "HESABU SARLU",
+
+    publisher: {
+      "@id": "https://hesabudrc.com/#organization",
+    },
+
+    inLanguage: "fr",
+  };
+
+  const services = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+
+    serviceType: "Solutions GPS",
+
+    provider: {
+      "@id": "https://hesabudrc.com/#organization",
+    },
+
+    areaServed: "République Démocratique du Congo",
+
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+
+      name: "Services HESABU",
+
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Géolocalisation GPS",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Gestion de flotte",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Télématique embarquée",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Technologies IoT",
+          },
+        },
+      ],
+    },
   };
 
   return (
     <Helmet>
       <script type="application/ld+json">
-        {JSON.stringify(data)}
+        {JSON.stringify(organization)}
+      </script>
+
+      <script type="application/ld+json">
+        {JSON.stringify(website)}
+      </script>
+
+      <script type="application/ld+json">
+        {JSON.stringify(services)}
       </script>
     </Helmet>
   );
