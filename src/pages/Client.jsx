@@ -1,10 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import mapBg from "../assets/map-bg.png";
+import SEO from "../components/SEO";
 
 function Client() {
   return (
     <>
+      <SEO
+        title="Espace Client GPS | HESABU SARLU"
+        description="Accédez à votre espace client HESABU SARLU pour suivre vos véhicules en temps réel, consulter vos rapports et gérer votre flotte GPS en toute sécurité."
+        keywords="espace client GPS, suivi de véhicules, gestion de flotte, HESABU plateforme, tracking GPS RDC"
+        url="https://hesaburdc.com/client"
+      />
       <Navbar />
 
       <section
