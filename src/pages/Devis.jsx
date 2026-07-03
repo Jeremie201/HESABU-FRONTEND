@@ -7,7 +7,7 @@ function Devis() {
   return (
     <>
       <SEO
-        title="Contact | HESABU SARLU"
+        title="Devis | HESABU SARLU"
         description="Contactez HESABU SARLU pour vos besoins en solutions GPS, gestion de flotte, télématique embarquée et IoT en RDC."
         keywords="contact HESABU, GPS RDC, gestion de flotte, support client, IoT RDC"
       />
