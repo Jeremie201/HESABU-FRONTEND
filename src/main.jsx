@@ -4,12 +4,16 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "react-hot-toast";
 import App from "./App";
 import "./index.css";
+import StructuredData from "./components/StructuredData";
 
 ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
   <React.StrictMode>
     <HelmetProvider>
+
+      <StructuredData />
+
       <Toaster
         position="top-right"
         toastOptions={{
@@ -18,6 +22,7 @@ ReactDOM.createRoot(
       />
 
       <App />
+
     </HelmetProvider>
   </React.StrictMode>
 );
