@@ -7,9 +7,62 @@ export default function SEO({
   image = "https://hesabudrc.com/affiche.png",
   url = "https://hesabudrc.com",
 }) {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+
+    name: "HESABU SARLU",
+
+    url: "https://hesabudrc.com",
+
+    logo: "https://hesabudrc.com/favicon.png",
+
+    image: "https://hesabudrc.com/affiche.png",
+
+    description:
+      "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
+
+    telephone: "+243839573532",
+
+    email: "iot@hesabudrc.com",
+
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "11A3 Avenue Golf, Anciennes Galeries Présidentielles",
+      addressLocality: "Kinshasa-Gombe",
+      addressCountry: "CD",
+    },
+
+    areaServed: {
+      "@type": "Country",
+      name: "République Démocratique du Congo",
+    },
+
+    foundingLocation: {
+      "@type": "Place",
+      name: "Kinshasa",
+    },
+
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+243839573532",
+      contactType: "customer service",
+      areaServed: "CD",
+      availableLanguage: ["French", "English"],
+    },
+
+    sameAs: [
+      "https://www.facebook.com/"
+    ]
+  };
+
   return (
     <Helmet>
+
       {/* SEO principal */}
+
       <title>{title}</title>
 
       <meta
@@ -48,6 +101,7 @@ export default function SEO({
       />
 
       {/* Open Graph */}
+
       <meta
         property="og:type"
         content="website"
@@ -70,7 +124,7 @@ export default function SEO({
 
       <meta
         property="og:image:alt"
-        content="HESABU SARLU - Solutions GPS et Gestion de flotte"
+        content="HESABU SARLU - Solutions GPS et Gestion de Flotte"
       />
 
       <meta
@@ -89,6 +143,7 @@ export default function SEO({
       />
 
       {/* Twitter */}
+
       <meta
         name="twitter:card"
         content="summary_large_image"
@@ -113,6 +168,13 @@ export default function SEO({
         name="twitter:image:alt"
         content="HESABU SARLU"
       />
+
+      {/* Schema.org */}
+
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+
     </Helmet>
   );
 }
