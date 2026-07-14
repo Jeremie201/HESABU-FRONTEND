@@ -12,6 +12,11 @@ import Client from "./pages/Client";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Ressources from "./pages/Ressources";
+import ArticleGPS from "./pages/articles/ArticleGPS";
+import ArticleCarburant from "./pages/articles/ArticleCarburant";
+import ArticleFlotte from "./pages/articles/ArticleFlotte";
+import ArticleVol from "./pages/articles/ArticleVol";
+import ArticleIoT from "./pages/articles/ArticleIoT";
 
 function App() {
   return (
@@ -40,6 +45,31 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route
+          path="/ressources/gps-professionnel"
+          element={<ArticleGPS />}
+        />
+
+        <Route
+          path="/ressources/reduire-couts-gps-sonde-carburant"
+          element={<ArticleCarburant />}
+        />
+
+        <Route
+          path="/ressources/gestion-flotte"
+          element={<ArticleFlotte />}
+        />
+
+        <Route
+          path="/ressources/securite-anti-vol"
+          element={<ArticleVol />}
+        />
+
+        <Route
+          path="/ressources/iot-gestion-flotte"
+          element={<ArticleIoT />}
+        />
 
       </Routes>
 

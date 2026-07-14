@@ -2,6 +2,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import mapBg from "../assets/map-bg.png";
+import articles from "../data/articles";
+import ArticleCard from "../components/ArticleCard";
+import FeaturedArticle from "../components/FeaturedArticle";
+import CategoryCard from "../components/CategoryCard";
 
 function Ressources() {
   return (
@@ -144,6 +148,71 @@ function Ressources() {
 
       </section>
 
+      {/* ARTICLE À LA UNE */}
+
+      <FeaturedArticle article={articles[0]} />
+
+      {/* CATÉGORIES */}
+
+      <section className="py-24 bg-gray-50">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="text-center mb-16">
+
+            <span className="uppercase tracking-[4px] text-red-600 font-semibold">
+              Explorer
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+              Explorez nos domaines d'expertise
+            </h2>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Retrouvez nos conseils et guides sur les technologies GPS,
+              la gestion de flotte, la sécurité, le carburant et les objets connectés.
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <CategoryCard
+              icon="📍"
+              title="GPS"
+              description="Découvrez les solutions de géolocalisation et de suivi en temps réel."
+            />
+
+            <CategoryCard
+              icon="⛽"
+              title="Carburant"
+              description="Réduisez vos coûts grâce au suivi intelligent de la consommation."
+            />
+
+            <CategoryCard
+              icon="🚚"
+              title="Gestion de flotte"
+              description="Optimisez l'exploitation et la performance de vos véhicules."
+            />
+
+            <CategoryCard
+              icon="🔒"
+              title="Sécurité"
+              description="Protégez vos véhicules grâce aux alertes et à l'immobilisation à distance."
+            />
+
+            <CategoryCard
+              icon="📡"
+              title="IoT"
+              description="Découvrez les technologies connectées au service de votre activité."
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* ARTICLES */}
 
       <section className="py-24 bg-white">
@@ -152,86 +221,25 @@ function Ressources() {
 
           <div className="text-center mb-16">
 
-            <h2 className="text-4xl font-bold mb-6">
-              Articles à découvrir
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Nos articles
             </h2>
 
-            <p className="text-gray-600 text-lg">
-              Les premiers guides seront disponibles prochainement.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Découvrez nos guides pratiques pour mieux comprendre les solutions GPS,
+              la gestion de flotte, la sécurité des véhicules et les technologies IoT.
             </p>
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
 
-            <div className="border rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-
-              <div className="h-56 bg-red-600"></div>
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Comment réduire les coûts grâce au GPS et à la sonde de carburant
-                </h3>
-
-                <p className="text-gray-600 mb-6">
-                  Découvrez comment surveiller votre consommation,
-                  détecter les pertes et améliorer votre rentabilité.
-                </p>
-
-                <span className="text-red-600 font-bold">
-                  Bientôt disponible →
-                </span>
-
-              </div>
-
-            </div>
-
-            <div className="border rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-
-              <div className="h-56 bg-black"></div>
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Comment protéger votre véhicule contre le vol
-                </h3>
-
-                <p className="text-gray-600 mb-6">
-                  Les meilleures fonctionnalités GPS pour sécuriser
-                  vos véhicules.
-                </p>
-
-                <span className="text-red-600 font-bold">
-                  Bientôt disponible →
-                </span>
-
-              </div>
-
-            </div>
-
-            <div className="border rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-
-              <div className="h-56 bg-gray-700"></div>
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold mb-4">
-                  Comment choisir un GPS professionnel
-                </h3>
-
-                <p className="text-gray-600 mb-6">
-                  Les critères essentiels avant d'équiper
-                  votre flotte.
-                </p>
-
-                <span className="text-red-600 font-bold">
-                  Bientôt disponible →
-                </span>
-
-              </div>
-
-            </div>
+            {articles.slice(1).map((article) => (
+              <ArticleCard
+                key={article.id}
+                article={article}
+              />
+            ))}
 
           </div>
 
