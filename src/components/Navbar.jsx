@@ -82,6 +82,10 @@ function Navbar() {
             Solutions
           </NavLink>
 
+          <NavLink to="/ressources" className={linkClass}>
+            Ressources
+          </NavLink>
+
           <NavLink to="/about" className={linkClass}>
             À propos
           </NavLink>
@@ -160,6 +164,14 @@ function Navbar() {
               className="text-gray-700 hover:text-red-600"
             >
               Solutions
+            </NavLink>
+
+            <NavLink
+              to="/ressources"
+              onClick={() => setMenuOpen(false)}
+              className="text-gray-700 hover:text-red-600"
+            >
+              Ressources
             </NavLink>
 
             <NavLink
