@@ -11,6 +11,7 @@ import Devis from "./pages/Devis";
 import Client from "./pages/Client";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Ressources from "./pages/Ressources";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="/services" element={<Services />} />
 
         <Route path="/solutions" element={<Solutions />} />
+
+        <Route path="/ressources" element={<Ressources />} />
 
         <Route path="/about" element={<About />} />
 
