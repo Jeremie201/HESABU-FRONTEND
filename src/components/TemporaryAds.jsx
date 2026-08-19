@@ -1,4 +1,3 @@
-```jsx
 import { useEffect, useState } from "react";
 
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
@@ -360,4 +359,3 @@ export default function TemporaryAds() {
     </div>
   );
 }
-```
