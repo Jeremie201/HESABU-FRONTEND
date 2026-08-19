@@ -18,11 +18,16 @@ import ArticleFlotte from "./pages/articles/ArticleFlotte";
 import ArticleVol from "./pages/articles/ArticleVol";
 import ArticleIoT from "./pages/articles/ArticleIoT";
 
+import TemporaryAds from "./components/TemporaryAds";
+
 function App() {
   return (
     <BrowserRouter>
 
       <ScrollToTop />
+
+      {/* Publicité temporaire HESABU */}
+      <TemporaryAds />
 
       <Routes>
 
