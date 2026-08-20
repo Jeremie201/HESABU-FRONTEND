@@ -178,7 +178,7 @@ export default function TemporaryAds() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="relative overflow-hidden rounded-2xl bg-[#E30613] shadow-[0_15px_50px_rgba(0,0,0,0.35)]">
+      <div className="relative overflow-hidden rounded-2xl bg-[#E30613] shadow-[0_0_35px_rgba(255,255,255,0.75)]">
 
         {/* Bouton fermer */}
         <button
