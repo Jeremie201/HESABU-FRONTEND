@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
 const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
 
-const AUTO_SLIDE_TIME = 8000;
+const AUTO_SLIDE_TIME = 9000;
 
 
 const ads = [
@@ -51,11 +51,11 @@ const ads = [
     id: 5,
     icon: "📍",
     label: "GPS EN TEMPS RÉEL",
-    title: "Vous ne pouvez pas être partout. HESABU, si.",
+    title: "Vous ne pouvez pas être partout. Avec HESABU, vous le pouvez.",
     description:
       "Gardez un œil sur vos véhicules et leurs déplacements grâce à notre plateforme de géolocalisation.",
     button: "Découvrir HESABU",
-    link: "/contact",
+    link: "/about",
   },
 ];
 
