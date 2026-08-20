@@ -5,6 +5,8 @@ const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
 
 const AUTO_SLIDE_TIME = 8000;
 
+const ADS_CLOSED_KEY = "hesabu_ads_closed";
+
 const ads = [
   {
     id: 1,
@@ -66,7 +68,9 @@ function getRemainingTime() {
   }
 
   return {
-    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    days: Math.floor(
+      difference / (1000 * 60 * 60 * 24)
+    ),
     hours: Math.floor(
       (difference / (1000 * 60 * 60)) % 24
     ),
@@ -79,49 +83,84 @@ function getRemainingTime() {
   };
 }
 
+function isCampaignActive() {
+  const now = new Date();
+
+  return (
+    now >= CAMPAIGN_START &&
+    now <= CAMPAIGN_END
+  );
+}
+
 export default function TemporaryAds() {
   const [currentAd, setCurrentAd] = useState(0);
-  const [visible, setVisible] = useState(false);
+
+  const [visible, setVisible] = useState(() => {
+    const alreadyClosed =
+      sessionStorage.getItem(ADS_CLOSED_KEY) === "true";
+
+    return isCampaignActive() && !alreadyClosed;
+  });
+
   const [remaining, setRemaining] = useState(
     getRemainingTime()
   );
+
   const [isPaused, setIsPaused] = useState(false);
 
-  // Vérification de la période de campagne
+  /*
+   * Vérification de la campagne
+   *
+   * IMPORTANT :
+   * On ne remet PAS visible à true toutes les secondes.
+   * Si l'utilisateur a fermé la publicité, elle reste fermée.
+   */
   useEffect(() => {
     const checkCampaign = () => {
-      const now = new Date();
-
-      if (now >= CAMPAIGN_START && now <= CAMPAIGN_END) {
-        setVisible(true);
-      } else {
+      if (!isCampaignActive()) {
         setVisible(false);
       }
     };
 
     checkCampaign();
 
-    const interval = setInterval(checkCampaign, 1000);
+    const interval = setInterval(
+      checkCampaign,
+      1000
+    );
 
     return () => clearInterval(interval);
   }, []);
 
-  // Rotation automatique des publicités
+  /*
+   * Rotation automatique
+   */
   useEffect(() => {
-    if (!visible || isPaused) return;
+    if (!visible || isPaused) {
+      return;
+    }
 
     const interval = setInterval(() => {
       setCurrentAd(
-        (previous) => (previous + 1) % ads.length
+        (previous) =>
+          (previous + 1) % ads.length
       );
     }, AUTO_SLIDE_TIME);
 
     return () => clearInterval(interval);
-  }, [visible, isPaused, currentAd]);
+  }, [
+    visible,
+    isPaused,
+    currentAd,
+  ]);
 
-  // Compte à rebours
+  /*
+   * Compte à rebours
+   */
   useEffect(() => {
-    if (!visible) return;
+    if (!visible) {
+      return;
+    }
 
     const interval = setInterval(() => {
       const time = getRemainingTime();
@@ -138,15 +177,20 @@ export default function TemporaryAds() {
     return () => clearInterval(interval);
   }, [visible]);
 
-  // Aller à la publicité précédente
+  /*
+   * Publicité précédente
+   */
   const previousAd = () => {
     setCurrentAd(
       (previous) =>
-        (previous - 1 + ads.length) % ads.length
+        (previous - 1 + ads.length) %
+        ads.length
     );
   };
 
-  // Aller à la publicité suivante
+  /*
+   * Publicité suivante
+   */
   const nextAd = () => {
     setCurrentAd(
       (previous) =>
@@ -154,16 +198,29 @@ export default function TemporaryAds() {
     );
   };
 
-  // Aller directement à une publicité
+  /*
+   * Aller directement à une publicité
+   */
   const selectAd = (index) => {
     setCurrentAd(index);
   };
 
-  // Fermer la publicité
+  /*
+   * Fermer définitivement la publicité
+   * pour cette session
+   */
   const closeAd = () => {
+    sessionStorage.setItem(
+      ADS_CLOSED_KEY,
+      "true"
+    );
+
     setVisible(false);
   };
 
+  /*
+   * Si campagne terminée ou publicité fermée
+   */
   if (!visible || !remaining) {
     return null;
   }
@@ -307,7 +364,9 @@ export default function TemporaryAds() {
             {ads.map((item, index) => (
               <button
                 key={item.id}
-                onClick={() => selectAd(index)}
+                onClick={() =>
+                  selectAd(index)
+                }
                 aria-label={`Afficher la publicité ${index + 1}`}
                 className={`h-1.5 rounded-full transition-all ${
                   index === currentAd
@@ -342,7 +401,7 @@ export default function TemporaryAds() {
         )}
       </div>
 
-      {/* Animation de la barre de progression */}
+      {/* Animation barre de progression */}
       <style>
         {`
           @keyframes adProgress {
