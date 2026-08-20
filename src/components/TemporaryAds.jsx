@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
 const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
 
-const AUTO_SLIDE_TIME = 9000;
-
+const AUTO_SLIDE_TIME = 8000;
 
 const ads = [
   {
@@ -51,11 +50,11 @@ const ads = [
     id: 5,
     icon: "📍",
     label: "GPS EN TEMPS RÉEL",
-    title: "Vous ne pouvez pas être partout. Avec HESABU, vous le pouvez.",
+    title: "Vous ne pouvez pas être partout. HESABU, si.",
     description:
       "Gardez un œil sur vos véhicules et leurs déplacements grâce à notre plateforme de géolocalisation.",
     button: "Découvrir HESABU",
-    link: "/about",
+    link: "/contact",
   },
 ];
 
@@ -67,9 +66,7 @@ function getRemainingTime() {
   }
 
   return {
-    days: Math.floor(
-      difference / (1000 * 60 * 60 * 24)
-    ),
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
     hours: Math.floor(
       (difference / (1000 * 60 * 60)) % 24
     ),
@@ -85,32 +82,16 @@ function getRemainingTime() {
 function isCampaignActive() {
   const now = new Date();
 
-  return (
-    now >= CAMPAIGN_START &&
-    now <= CAMPAIGN_END
-  );
+  return now >= CAMPAIGN_START && now <= CAMPAIGN_END;
 }
 
 export default function TemporaryAds() {
   const [currentAd, setCurrentAd] = useState(0);
-
-  const [visible, setVisible] = useState(() => {
-    return isCampaignActive();
-  });
-
-  const [remaining, setRemaining] = useState(
-    getRemainingTime()
-  );
-
+  const [visible, setVisible] = useState(() => isCampaignActive());
+  const [remaining, setRemaining] = useState(getRemainingTime());
   const [isPaused, setIsPaused] = useState(false);
 
-  /*
-   * Vérification de la campagne
-   *
-   * IMPORTANT :
-   * On ne remet PAS visible à true toutes les secondes.
-   * Si l'utilisateur a fermé la publicité, elle reste fermée.
-   */
+  // Vérification uniquement de la fin de campagne
   useEffect(() => {
     const checkCampaign = () => {
       if (!isCampaignActive()) {
@@ -120,43 +101,27 @@ export default function TemporaryAds() {
 
     checkCampaign();
 
-    const interval = setInterval(
-      checkCampaign,
-      1000
-    );
+    const interval = setInterval(checkCampaign, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-  /*
-   * Rotation automatique
-   */
+  // Rotation automatique
   useEffect(() => {
-    if (!visible || isPaused) {
-      return;
-    }
+    if (!visible || isPaused) return;
 
     const interval = setInterval(() => {
       setCurrentAd(
-        (previous) =>
-          (previous + 1) % ads.length
+        (previous) => (previous + 1) % ads.length
       );
     }, AUTO_SLIDE_TIME);
 
     return () => clearInterval(interval);
-  }, [
-    visible,
-    isPaused,
-    currentAd,
-  ]);
+  }, [visible, isPaused, currentAd]);
 
-  /*
-   * Compte à rebours
-   */
+  // Compte à rebours
   useEffect(() => {
-    if (!visible) {
-      return;
-    }
+    if (!visible) return;
 
     const interval = setInterval(() => {
       const time = getRemainingTime();
@@ -173,20 +138,13 @@ export default function TemporaryAds() {
     return () => clearInterval(interval);
   }, [visible]);
 
-  /*
-   * Publicité précédente
-   */
   const previousAd = () => {
     setCurrentAd(
       (previous) =>
-        (previous - 1 + ads.length) %
-        ads.length
+        (previous - 1 + ads.length) % ads.length
     );
   };
 
-  /*
-   * Publicité suivante
-   */
   const nextAd = () => {
     setCurrentAd(
       (previous) =>
@@ -194,24 +152,14 @@ export default function TemporaryAds() {
     );
   };
 
-  /*
-   * Aller directement à une publicité
-   */
   const selectAd = (index) => {
     setCurrentAd(index);
   };
 
-  /*
-   * Fermer définitivement la publicité
-   * pour cette session
-   */
   const closeAd = () => {
     setVisible(false);
   };
 
-  /*
-   * Si campagne terminée ou publicité fermée
-   */
   if (!visible || !remaining) {
     return null;
   }
@@ -235,8 +183,15 @@ export default function TemporaryAds() {
           ×
         </button>
 
-        <div className="flex flex-col gap-6 p-6 pb-12 md:flex-row md:items-center md:p-8 md:pb-12">
-
+        {/* 
+          key={ad.id} est important :
+          à chaque changement de publicité, React recrée cette zone
+          et relance automatiquement l'animation.
+        */}
+        <div
+          key={ad.id}
+          className="animate-ad-enter flex flex-col gap-6 p-6 pb-12 md:flex-row md:items-center md:p-8 md:pb-12"
+        >
           {/* Icône */}
           <div className="hidden h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white text-4xl shadow-lg md:flex">
             {ad.icon}
@@ -245,19 +200,16 @@ export default function TemporaryAds() {
           {/* Contenu */}
           <div className="flex-1 pr-8 text-white">
 
-            {/* Label */}
             <div className="mb-2 flex items-center gap-2">
               <span className="text-xs font-bold tracking-[0.2em] text-white/80">
                 {ad.label}
               </span>
             </div>
 
-            {/* Titre */}
             <h2 className="text-2xl font-extrabold leading-tight md:text-3xl">
               {ad.title}
             </h2>
 
-            {/* Description */}
             <p className="mt-2 max-w-2xl text-sm leading-6 text-white/90 md:text-base">
               {ad.description}
             </p>
@@ -265,59 +217,34 @@ export default function TemporaryAds() {
             {/* Compte à rebours */}
             {ad.id === 1 && (
               <div className="mt-4 flex flex-wrap items-center gap-2">
-
                 <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-white/80">
                   Offre valable encore :
                 </span>
 
-                {/* Jours */}
                 <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
-                  <strong>
-                    {remaining.days}
-                  </strong>
-
-                  <span className="ml-1 text-xs">
-                    j
-                  </span>
+                  <strong>{remaining.days}</strong>
+                  <span className="ml-1 text-xs">j</span>
                 </div>
 
-                {/* Heures */}
                 <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
                   <strong>
-                    {String(
-                      remaining.hours
-                    ).padStart(2, "0")}
+                    {String(remaining.hours).padStart(2, "0")}
                   </strong>
-
-                  <span className="ml-1 text-xs">
-                    h
-                  </span>
+                  <span className="ml-1 text-xs">h</span>
                 </div>
 
-                {/* Minutes */}
                 <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
                   <strong>
-                    {String(
-                      remaining.minutes
-                    ).padStart(2, "0")}
+                    {String(remaining.minutes).padStart(2, "0")}
                   </strong>
-
-                  <span className="ml-1 text-xs">
-                    min
-                  </span>
+                  <span className="ml-1 text-xs">min</span>
                 </div>
 
-                {/* Secondes */}
                 <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
                   <strong>
-                    {String(
-                      remaining.seconds
-                    ).padStart(2, "0")}
+                    {String(remaining.seconds).padStart(2, "0")}
                   </strong>
-
-                  <span className="ml-1 text-xs">
-                    s
-                  </span>
+                  <span className="ml-1 text-xs">s</span>
                 </div>
               </div>
             )}
@@ -330,18 +257,14 @@ export default function TemporaryAds() {
               className="inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#E30613] shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100 md:w-auto"
             >
               {ad.button}
-
-              <span className="ml-2">
-                →
-              </span>
+              <span className="ml-2">→</span>
             </a>
           </div>
         </div>
 
         {/* Navigation */}
-        <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-3">
+        <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
 
-          {/* Précédent */}
           <button
             onClick={previousAd}
             aria-label="Publicité précédente"
@@ -350,14 +273,11 @@ export default function TemporaryAds() {
             ←
           </button>
 
-          {/* Indicateurs */}
           <div className="flex items-center gap-1.5">
             {ads.map((item, index) => (
               <button
                 key={item.id}
-                onClick={() =>
-                  selectAd(index)
-                }
+                onClick={() => selectAd(index)}
                 aria-label={`Afficher la publicité ${index + 1}`}
                 className={`h-1.5 rounded-full transition-all ${
                   index === currentAd
@@ -368,7 +288,6 @@ export default function TemporaryAds() {
             ))}
           </div>
 
-          {/* Suivant */}
           <button
             onClick={nextAd}
             aria-label="Publicité suivante"
@@ -392,7 +311,6 @@ export default function TemporaryAds() {
         )}
       </div>
 
-      {/* Animation barre de progression */}
       <style>
         {`
           @keyframes adProgress {
@@ -403,6 +321,22 @@ export default function TemporaryAds() {
             to {
               width: 100%;
             }
+          }
+
+          @keyframes adEnter {
+            from {
+              opacity: 0;
+              transform: translateX(25px);
+            }
+
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
+          .animate-ad-enter {
+            animation: adEnter 0.45s ease-out both;
           }
         `}
       </style>
