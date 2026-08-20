@@ -51,7 +51,7 @@ const ads = [
     label: "SÉCURITÉ",
     title: "Votre véhicule, toujours sous contrôle",
     description:
-      "Recevez des alertes et consultez la position de vos véhicules en temps réel, où que vous soyez.",
+      "Voitures, motos, utilitaires ou camions : suivez vos véhicules en temps réel et recevez des alertes pour mieux protéger votre flotte.",
     button: "Protéger mon véhicule",
     link: "/contact",
   },
