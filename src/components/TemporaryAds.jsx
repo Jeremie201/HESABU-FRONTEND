@@ -5,7 +5,6 @@ const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
 
 const AUTO_SLIDE_TIME = 8000;
 
-const ADS_CLOSED_KEY = "hesabu_ads_closed";
 
 const ads = [
   {
@@ -96,10 +95,7 @@ export default function TemporaryAds() {
   const [currentAd, setCurrentAd] = useState(0);
 
   const [visible, setVisible] = useState(() => {
-    const alreadyClosed =
-      sessionStorage.getItem(ADS_CLOSED_KEY) === "true";
-
-    return isCampaignActive() && !alreadyClosed;
+    return isCampaignActive();
   });
 
   const [remaining, setRemaining] = useState(
@@ -210,11 +206,6 @@ export default function TemporaryAds() {
    * pour cette session
    */
   const closeAd = () => {
-    sessionStorage.setItem(
-      ADS_CLOSED_KEY,
-      "true"
-    );
-
     setVisible(false);
   };
 
