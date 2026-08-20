@@ -14,7 +14,7 @@ const ads = [
     description:
       "Suivez vos véhicules en temps réel et gérez vos déplacements depuis votre téléphone ou votre ordinateur.",
     button: "Profiter de l'offre",
-    link: "/devis",
+    link: "/contact",
   },
   {
     id: 2,
