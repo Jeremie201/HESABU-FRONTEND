@@ -30,7 +30,7 @@ const ads = [
     title: "Où va votre carburant ?",
     description:
       "Surveillez les déplacements de vos véhicules et améliorez le contrôle de votre consommation de carburant.",
-    button: "Contrôler ma flotte",
+    button: "Réduire mes coûts",
     link: "/contact",
   },
 
@@ -52,7 +52,7 @@ const ads = [
     title: "Votre véhicule, toujours sous contrôle",
     description:
       "Recevez des alertes et consultez la position de vos véhicules en temps réel, où que vous soyez.",
-    button: "Sécuriser mon véhicule",
+    button: "Protéger mon véhicule",
     link: "/contact",
   },
 
@@ -60,10 +60,10 @@ const ads = [
     id: 5,
     image: gpsImage,
     label: "GPS EN TEMPS RÉEL",
-    title: "Vous ne pouvez pas être partout. HESABU, si.",
+    title: "Vous ne pouvez pas être partout. Avec HESABU, vous le pouvez.",
     description:
       "Gardez un œil sur vos véhicules et leurs déplacements grâce à notre plateforme de géolocalisation.",
-    button: "Découvrir HESABU",
+    button: "Voir la solution GPS",
     link: "/contact",
   },
 ];
@@ -392,11 +392,11 @@ export default function TemporaryAds() {
 
             <a
               href={ad.link}
-              className="inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#E30613] shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100 md:w-auto"
+              className="group inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-[#E30613] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-gray-50 hover:shadow-xl md:w-auto"
             >
               {ad.button}
 
-              <span className="ml-2">
+              <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
                 →
               </span>
 
