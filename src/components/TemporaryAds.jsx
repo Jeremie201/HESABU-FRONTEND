@@ -251,7 +251,7 @@ export default function TemporaryAds() {
             </span>
 
             <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">
-              À LA UNE HESABU
+              HESABU VOUS INFORME
             </span>
 
           </div>
