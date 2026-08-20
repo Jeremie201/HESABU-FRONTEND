@@ -1,3 +1,9 @@
+import offreImage from "../assets/ads/offre-hesabu.jpg";
+import carburantImage from "../assets/ads/carburant.jpg";
+import flotteImage from "../assets/ads/flotte.jpg";
+import securiteImage from "../assets/ads/securite.jpg";
+import gpsImage from "../assets/ads/gps.jpg";
+
 import { useEffect, useState } from "react";
 
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
@@ -8,7 +14,7 @@ const AUTO_SLIDE_TIME = 8000;
 const ads = [
   {
     id: 1,
-    icon: "🔥",
+    image: offreImage,
     label: "OFFRE SPÉCIALE HESABU",
     title: "Prenez le contrôle de vos véhicules",
     description:
@@ -18,7 +24,7 @@ const ads = [
   },
   {
     id: 2,
-    icon: "⛽",
+    image: carburantImage,
     label: "GESTION DU CARBURANT",
     title: "Où va votre carburant ?",
     description:
@@ -28,7 +34,7 @@ const ads = [
   },
   {
     id: 3,
-    icon: "🚗",
+    image: flotteImage,
     label: "GESTION DE FLOTTE",
     title: "Chaque kilomètre compte",
     description:
@@ -38,7 +44,7 @@ const ads = [
   },
   {
     id: 4,
-    icon: "🛡️",
+    image: securiteImage,
     label: "SÉCURITÉ",
     title: "Votre véhicule, toujours sous contrôle",
     description:
@@ -48,7 +54,7 @@ const ads = [
   },
   {
     id: 5,
-    icon: "📍",
+    image: gpsImage,
     label: "GPS EN TEMPS RÉEL",
     title: "Vous ne pouvez pas être partout. HESABU, si.",
     description:
@@ -193,8 +199,12 @@ export default function TemporaryAds() {
           className="animate-ad-enter flex flex-col gap-6 p-6 pb-12 md:flex-row md:items-center md:p-8 md:pb-12"
         >
           {/* Icône */}
-          <div className="hidden h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white text-4xl shadow-lg md:flex">
-            {ad.icon}
+          <div className="hidden h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-white shadow-lg md:flex">
+            <img
+              src={ad.image}
+              alt={ad.title}
+              className="h-full w-full object-cover"
+            />
           </div>
 
           {/* Contenu */}
