@@ -197,9 +197,8 @@ export default function TemporaryAds() {
         <div
           key={ad.id}
           className="animate-ad-enter flex flex-col gap-6 p-6 pb-12 md:flex-row md:items-center md:p-8 md:pb-12"
-        >
-          {/* Icône */}
-          <div className="hidden h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-white shadow-lg md:flex">
+        >          {/* Icône */}
+          <div className="flex h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-white shadow-lg sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
             <img
               src={ad.image}
               alt={ad.title}
@@ -208,7 +207,7 @@ export default function TemporaryAds() {
           </div>
 
           {/* Contenu */}
-          <div className="flex-1 pr-8 text-white">
+          <div className="min-w-0 flex-1 pr-8 text-white">
 
             <div className="mb-2 flex items-center gap-2">
               <span className="text-xs font-bold tracking-[0.2em] text-white/80">
@@ -216,7 +215,7 @@ export default function TemporaryAds() {
               </span>
             </div>
 
-            <h2 className="text-2xl font-extrabold leading-tight md:text-3xl">
+            <h2 className="text-xl font-extrabold leading-tight sm:text-2xl md:text-3xl">
               {ad.title}
             </h2>
 
