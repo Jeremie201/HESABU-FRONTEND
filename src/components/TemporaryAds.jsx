@@ -322,73 +322,66 @@ export default function TemporaryAds() {
             ================================================== */}
 
             {ad.id === 1 && (
-              <div className="mt-4 flex flex-wrap items-center gap-2">
-
-                <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-white/80">
-                  Offre valable encore :
-                </span>
-
-                {/* Jours */}
-                <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
-
-                  <strong>
-                    {remaining.days}
-                  </strong>
-
-                  <span className="ml-1 text-xs">
-                    j
+              <div className="mt-4">
+            
+                {/* Libellé */}
+                <div className="mb-2">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-white/80">
+                    Offre valable encore :
                   </span>
-
                 </div>
-
-                {/* Heures */}
-                <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
-
-                  <strong>
-                    {String(
-                      remaining.hours
-                    ).padStart(2, "0")}
-                  </strong>
-
-                  <span className="ml-1 text-xs">
-                    h
-                  </span>
-
+            
+                {/* Compte à rebours */}
+                <div className="flex items-center gap-1.5 sm:gap-2">
+            
+                  {/* Jours */}
+                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+                    <strong className="text-sm sm:text-base">
+                      {remaining.days}
+                    </strong>
+            
+                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+                      j
+                    </span>
+                  </div>
+            
+                  {/* Heures */}
+                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+                    <strong className="text-sm sm:text-base">
+                      {String(remaining.hours).padStart(2, "0")}
+                    </strong>
+            
+                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+                      h
+                    </span>
+                  </div>
+            
+                  {/* Minutes */}
+                  <div className="flex h-10 min-w-[48px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[55px]">
+                    <strong className="text-sm sm:text-base">
+                      {String(remaining.minutes).padStart(2, "0")}
+                    </strong>
+            
+                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+                      min
+                    </span>
+                  </div>
+            
+                  {/* Secondes */}
+                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+                    <strong className="text-sm sm:text-base">
+                      {String(remaining.seconds).padStart(2, "0")}
+                    </strong>
+            
+                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+                      s
+                    </span>
+                  </div>
+            
                 </div>
-
-                {/* Minutes */}
-                <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
-
-                  <strong>
-                    {String(
-                      remaining.minutes
-                    ).padStart(2, "0")}
-                  </strong>
-
-                  <span className="ml-1 text-xs">
-                    min
-                  </span>
-
-                </div>
-
-                {/* Secondes */}
-                <div className="rounded-lg bg-white px-3 py-1.5 text-center text-[#E30613]">
-
-                  <strong>
-                    {String(
-                      remaining.seconds
-                    ).padStart(2, "0")}
-                  </strong>
-
-                  <span className="ml-1 text-xs">
-                    s
-                  </span>
-
-                </div>
-
+            
               </div>
             )}
-
           </div>
 
           {/* ==================================================
