@@ -24,7 +24,7 @@ const ads = [
     description:
       "Surveillez les déplacements de vos véhicules et améliorez le contrôle de votre consommation de carburant.",
     button: "Contrôler ma flotte",
-    link: "/services",
+    link: "/contact",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const ads = [
     description:
       "Optimisez vos trajets et centralisez la gestion de votre flotte grâce aux solutions HESABU.",
     button: "Optimiser ma flotte",
-    link: "/services",
+    link: "/contact",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const ads = [
     description:
       "Recevez des alertes et consultez la position de vos véhicules en temps réel, où que vous soyez.",
     button: "Sécuriser mon véhicule",
-    link: "/devis",
+    link: "/contact",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const ads = [
     description:
       "Gardez un œil sur vos véhicules et leurs déplacements grâce à notre plateforme de géolocalisation.",
     button: "Découvrir HESABU",
-    link: "/services",
+    link: "/contact",
   },
 ];
 
