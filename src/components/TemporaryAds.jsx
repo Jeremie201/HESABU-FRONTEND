@@ -240,7 +240,17 @@ export default function TemporaryAds() {
 
   return (
     <div
-      className="fixed bottom-5 left-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl -translate-x-1/2"
+      className="
+        fixed
+        top-4
+        left-1/2
+        z-[9999]
+        w-[calc(100%-2rem)]
+        max-w-5xl
+        -translate-x-1/2
+        max-h-[calc(100vh-2rem)]
+        overflow-y-auto
+      "
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
