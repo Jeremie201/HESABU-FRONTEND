@@ -295,12 +295,20 @@ export default function TemporaryAds() {
           ================================================== */}
 
           {ad.featured ? (
-            <div className="w-full mb-6">
-              <img
-                src={ad.image}
-                alt={ad.title}
-                className="w-full h-auto max-h-[450px] object-contain rounded-2xl"
-              />
+            <div className="w-full">
+              <div className="w-full flex justify-center mb-6">
+                <img
+                  src={ad.image}
+                  alt={ad.title}
+                  className="
+                    w-full
+                    max-w-4xl
+                    max-h-[500px]
+                    object-contain
+                    rounded-2xl
+                  "
+                />
+              </div>
             </div>
           ) : (
             <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-white p-2 shadow-lg sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
@@ -311,7 +319,6 @@ export default function TemporaryAds() {
               />
             </div>
           )}
-
           {/* ==================================================
               CONTENU TEXTE
           ================================================== */}
