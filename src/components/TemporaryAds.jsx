@@ -3,6 +3,7 @@ import carburantImage from "../assets/ads/carburant.jpg";
 import flotteImage from "../assets/ads/flotte.jpg";
 import securiteImage from "../assets/ads/securite.jpg";
 import gpsImage from "../assets/ads/gps.jpg";
+import rentreeImage from "../assets/ads/rentree-scolaire.jpg";
 
 import { useEffect, useState } from "react";
 
@@ -12,6 +13,17 @@ const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
 const AUTO_SLIDE_TIME = 8000;
 
 const ads = [
+  {
+    id: 6,
+    image: rentreeImage,
+    label: "SPÉCIAL RENTRÉE SCOLAIRE",
+    title: "La sécurité de vos déplacements et ceux de vos enfants, notre priorité.",
+    description:
+      "Pour cette rentrée scolaire, gardez un œil sur les déplacements de vos enfants et vos véhicules grâce au suivi GPS HESABU.",
+    button: "Sécuriser mes déplacements",
+    link: "/contact",
+    featured: true,
+  },
   {
     id: 1,
     image: offreImage,
@@ -282,15 +294,23 @@ export default function TemporaryAds() {
               IMAGE
           ================================================== */}
 
-          <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-white shadow-lg sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
-
-            <img
-              src={ad.image}
-              alt={ad.title}
-              className="h-full w-full object-cover"
-            />
-
-          </div>
+          {ad.featured ? (
+            <div className="w-full mb-6">
+              <img
+                src={ad.image}
+                alt={ad.title}
+                className="w-full h-auto max-h-[450px] object-contain rounded-2xl"
+              />
+            </div>
+          ) : (
+            <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-white p-2 shadow-lg sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
+              <img
+                src={ad.image}
+                alt={ad.title}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          )}
 
           {/* ==================================================
               CONTENU TEXTE
