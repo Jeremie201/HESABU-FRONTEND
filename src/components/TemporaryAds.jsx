@@ -229,6 +229,12 @@ export default function TemporaryAds() {
     setVisible(false);
   };
 
+  const handleAdClick = (link) => {
+    setVisible(false);
+  
+    window.location.href = link;
+  };
+
   /*
    * Ne rien afficher si la campagne est inactive
    */
@@ -423,21 +429,22 @@ export default function TemporaryAds() {
 
           <div className="shrink-0">
 
-            <a
-              href={ad.link}
+            <button
+              onClick={() => {
+                setVisible(false);
+                window.location.href = ad.link;
+              }}
               className="group inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-[#E30613] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-gray-50 hover:shadow-xl md:w-auto"
             >
               {ad.button}
-
+          
               <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
                 →
               </span>
-
-            </a>
-
+          
+            </button>
+          
           </div>
-
-        </div>
 
         {/* ==================================================
             NAVIGATION
