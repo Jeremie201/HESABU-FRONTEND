@@ -287,7 +287,11 @@ export default function TemporaryAds() {
 
         <div
           key={ad.id}
-          className="animate-ad-enter flex flex-col gap-5 p-5 pb-12 pt-16 sm:flex-row sm:items-center sm:gap-6 sm:p-6 sm:pb-12 sm:pt-16 md:gap-7 md:p-8 md:pb-12 md:pt-16"
+          className={`animate-ad-enter gap-5 p-5 pb-12 pt-16 sm:gap-6 sm:p-6 sm:pb-12 sm:pt-16 md:gap-7 md:p-8 md:pb-12 md:pt-16 ${
+            ad.featured
+              ? "flex flex-col"
+              : "flex flex-col sm:flex-row sm:items-center"
+          }`}
         >
 
           {/* ==================================================
