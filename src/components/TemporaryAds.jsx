@@ -119,10 +119,6 @@ function isCampaignActive() {
 export default function TemporaryAds() {
   const [currentAd, setCurrentAd] = useState(0);
 
-  const [visible, setVisible] = useState(() =>
-    isCampaignActive()
-  );
-
   const [visible, setVisible] = useState(() => {
     const dismissed = sessionStorage.getItem("hesabu_ad_dismissed");
   
