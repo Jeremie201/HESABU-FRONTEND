@@ -426,23 +426,20 @@ export default function TemporaryAds() {
           {/* ==================================================
               CTA
           ================================================== */}
-
+          
           <div className="shrink-0">
-
-              <a
-                href={ad.link}
-                className="group inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-[#E30613] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-gray-50 hover:shadow-xl md:w-auto"
-              >
-                {ad.button}
-  
-                <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
-                  →
-                </span>
-  
-              </a>
-  
-            </div>
-  
+          
+            <button
+              onClick={() => handleAdClick(ad.link)}
+              className="group inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-[#E30613] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-gray-50 hover:shadow-xl md:w-auto"
+            >
+              {ad.button}
+          
+              <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+            </button>
+          
           </div>
         {/* ==================================================
             NAVIGATION
