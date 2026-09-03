@@ -123,9 +123,11 @@ export default function TemporaryAds() {
     isCampaignActive()
   );
 
-  const [remaining, setRemaining] = useState(
-    getRemainingTime()
-  );
+  const [visible, setVisible] = useState(() => {
+    const dismissed = sessionStorage.getItem("hesabu_ad_dismissed");
+  
+    return isCampaignActive() && dismissed !== "true";
+  });
 
   const [isPaused, setIsPaused] = useState(false);
 
@@ -226,10 +228,14 @@ export default function TemporaryAds() {
    * Fermer la publicité
    */
   const closeAd = () => {
+    sessionStorage.setItem("hesabu_ad_dismissed", "true");
+  
     setVisible(false);
   };
 
   const handleAdClick = (link) => {
+    sessionStorage.setItem("hesabu_ad_dismissed", "true");
+  
     setVisible(false);
   
     window.location.href = link;
