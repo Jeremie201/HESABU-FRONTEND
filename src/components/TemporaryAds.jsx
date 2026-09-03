@@ -16,7 +16,7 @@ const ads = [
   {
     id: 6,
     image: rentreeImage,
-    label: "SPÉCIAL RENTRÉE SCOLAIRE 2026-2027",
+    label: "SPÉCIALE RENTRÉE SCOLAIRE 2026-2027",
     title: "La sécurité de vos déplacements et ceux de vos enfants, notre priorité.",
     description:
       "Ne vous contentez plus d’attendre leur arrivée ou leur arrivée.  Avec HESABU, suivez en temps réel les déplacements de vos enfants et de vos véhicules, où que vous soyez.",
