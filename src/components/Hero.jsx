@@ -158,7 +158,7 @@ function Hero() {
           <div className="flex justify-center">
             <img
               src={affiche}
-              alt="Solutions GPS et gestion de flotte HESABU en RDC"
+              alt="Solutions GPS et gestion de flotte HESABU à Kinshasa en RDC"
               className="
                 w-full
                 max-w-2xl
