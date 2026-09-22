@@ -32,7 +32,7 @@ export default function SEO({
 
     telephone: "+243839573532",
 
-    email: "iot@hesabudrc.com",
+    email: "iot@hesaburdc.com",
 
     address: {
       "@type": "PostalAddress",
