@@ -4,10 +4,9 @@ export default function SEO({
   title,
   description,
   keywords,
-  image = "https://hesabudrc.com/affiche.png",
+  image = "https://hesabudrc.com/hesabusend.png",
   url = "https://hesabudrc.com",
 }) {
-
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -18,7 +17,7 @@ export default function SEO({
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image: "https://hesabudrc.com/affiche.png",
+    image: "https://hesabudrc.com/hesabusend.png",
 
     description:
       "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
@@ -53,14 +52,11 @@ export default function SEO({
       availableLanguage: ["French", "English"],
     },
 
-    sameAs: [
-      "https://www.facebook.com/"
-    ]
+    sameAs: [],
   };
 
   return (
     <Helmet>
-
       {/* SEO principal */}
 
       <title>{title}</title>
@@ -100,7 +96,7 @@ export default function SEO({
         href={url}
       />
 
-      {/* Open Graph */}
+      {/* Open Graph - Facebook / WhatsApp / LinkedIn */}
 
       <meta
         property="og:type"
@@ -123,6 +119,16 @@ export default function SEO({
       />
 
       <meta
+        property="og:image:secure_url"
+        content={image}
+      />
+
+      <meta
+        property="og:image:type"
+        content="image/png"
+      />
+
+      <meta
         property="og:image:alt"
         content="HESABU SARLU - Solutions GPS et Gestion de Flotte"
       />
@@ -142,7 +148,7 @@ export default function SEO({
         content="fr_CD"
       />
 
-      {/* Twitter */}
+      {/* Twitter / X */}
 
       <meta
         name="twitter:card"
@@ -174,7 +180,6 @@ export default function SEO({
       <script type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
-
     </Helmet>
   );
 }
