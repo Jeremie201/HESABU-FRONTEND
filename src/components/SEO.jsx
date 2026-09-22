@@ -23,7 +23,7 @@ export default function SEO({
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image,
+    image: image,
 
     description:
       "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
@@ -67,11 +67,12 @@ export default function SEO({
   return (
     <Helmet>
 
-      {/* ================================ */}
-      {/* SEO */}
-      {/* ================================ */}
-
+      {/* Langue du document */}
       <html lang="fr" />
+
+      {/* ================================= */}
+      {/* SEO principal */}
+      {/* ================================= */}
 
       <title>{title}</title>
 
@@ -96,11 +97,6 @@ export default function SEO({
       />
 
       <meta
-        name="language"
-        content="fr"
-      />
-
-      <meta
         name="theme-color"
         content="#dc2626"
       />
@@ -110,10 +106,10 @@ export default function SEO({
         href={url}
       />
 
-      {/* ================================ */}
-      {/* OPEN GRAPH */}
+      {/* ================================= */}
+      {/* Open Graph */}
       {/* Facebook / WhatsApp / LinkedIn */}
-      {/* ================================ */}
+      {/* ================================= */}
 
       <meta
         property="og:type"
@@ -147,7 +143,7 @@ export default function SEO({
 
       <meta
         property="og:image:alt"
-        content="HESABU SARLU - Solutions GPS et gestion de flotte"
+        content="HESABU SARLU - Solutions GPS et gestion de flotte en RDC"
       />
 
       <meta
@@ -165,9 +161,9 @@ export default function SEO({
         content="fr_CD"
       />
 
-      {/* ================================ */}
-      {/* TWITTER / X */}
-      {/* ================================ */}
+      {/* ================================= */}
+      {/* Twitter / X */}
+      {/* ================================= */}
 
       <meta
         name="twitter:card"
@@ -191,12 +187,12 @@ export default function SEO({
 
       <meta
         name="twitter:image:alt"
-        content="HESABU SARLU"
+        content="HESABU SARLU - Solutions GPS et gestion de flotte en RDC"
       />
 
-      {/* ================================ */}
-      {/* SCHEMA.ORG */}
-      {/* ================================ */}
+      {/* ================================= */}
+      {/* Schema.org */}
+      {/* ================================= */}
 
       <script type="application/ld+json">
         {JSON.stringify(schema)}
