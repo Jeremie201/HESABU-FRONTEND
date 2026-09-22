@@ -7,12 +7,17 @@ function Devis() {
   return (
     <>
       <SEO
-        title="Devis | HESABU SARLU"
-        description="Contactez HESABU SARLU pour vos besoins en solutions GPS, gestion de flotte, télématique embarquée et IoT en RDC."
-        keywords="contact HESABU, GPS RDC, gestion de flotte, support client, IoT RDC"
+        title="Devis GPS et Gestion de Flotte à Kinshasa et en RDC | HESABU"
+        description="Demandez un devis à HESABU SARLU pour une solution GPS, de géolocalisation, de gestion de flotte, de télématique ou d’IoT à Kinshasa et en République Démocratique du Congo."
+        keywords="devis GPS Kinshasa, prix GPS véhicule Kinshasa, devis gestion de flotte RDC, installation GPS véhicule, solution GPS entreprise RDC, coût gestion de flotte, HESABU devis"
+        image="https://hesabudrc.com/hesabusend.png"
+        url="https://hesabudrc.com/devis"
       />
+
       <Navbar />
+
       <DevisSection />
+
       <Footer />
     </>
   );
