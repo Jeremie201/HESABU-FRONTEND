@@ -174,7 +174,7 @@ function ContactSection() {
               </h2>
 
               <a
-                href="mailto:iot@hesabudrc.com"
+                href="mailto:iot@hesaburdc.com"
                 className="text-red-600 font-semibold hover:underline break-all"
               >
                 iot@hesabudrc.com
