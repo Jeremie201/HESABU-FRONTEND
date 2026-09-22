@@ -38,7 +38,7 @@ function Hero() {
               <br />
               et Gestion de Flotte
               <br />
-              en RDC
+              à Kinshasa et en RDC
             </h1>
 
             <p
@@ -51,10 +51,10 @@ function Hero() {
                 md:leading-8
               "
             >
-              HESABU SARLU accompagne les entreprises, institutions et
-              particuliers en République Démocratique du Congo avec des
-              solutions de géolocalisation GPS, de suivi de véhicules,
-              de télématique et de gestion intelligente de flotte.
+              HESABU SARLU accompagne les entreprises, institutions et particuliers
+              à Kinshasa et partout en République Démocratique du Congo avec des
+              solutions de géolocalisation GPS, de suivi de véhicules, de télématique
+              et de gestion intelligente de flotte.
             </p>
 
             {/* BOUTONS */}
