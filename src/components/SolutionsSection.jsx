@@ -1,24 +1,25 @@
 import mapBg from "../assets/map-bg.png";
+
 function SolutionsSection() {
   return (
     <section
-      className="
-      relative
-      py-24
-      overflow-hidden
-      "
+      className="relative py-24 overflow-hidden"
       style={{
         backgroundImage: `url(${mapBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      aria-labelledby="solutions-section-title"
     >
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
 
+        {/* ================================= */}
         {/* TITRE */}
+        {/* ================================= */}
 
         <div className="text-center mb-20">
 
@@ -27,393 +28,450 @@ function SolutionsSection() {
           </span>
 
           <h2
+            id="solutions-section-title"
             className="
-            text-3xl
-            sm:text-4xl
-            lg:text-5xl
-            font-bold
-            mt-3
-            mb-5
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              font-bold
+              text-gray-900
+              mt-3
+              mb-5
             "
           >
-            Des solutions adaptées à chaque activité
+            Des solutions GPS et de gestion de flotte
+            adaptées à chaque activité
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Grâce à nos technologies GPS, IoT et télématiques,
-            HESABU propose des solutions performantes pour
-            améliorer la sécurité, la productivité et la
-            rentabilité de vos opérations.
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
+            HESABU SARLU propose à Kinshasa et partout en République
+            Démocratique du Congo des solutions de géolocalisation GPS,
+            de télématique, d’IoT et de gestion intelligente de flotte
+            adaptées aux particuliers, entreprises, transporteurs
+            et gestionnaires de véhicules.
           </p>
 
         </div>
 
-        {/* CARTES */}
+        {/* ================================= */}
+        {/* SOLUTIONS PAR ACTIVITÉ */}
+        {/* ================================= */}
 
         <div
           className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-4
-          gap-8
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-8
           "
         >
 
           {/* PARTICULIERS */}
 
-          <div
-           className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5 text-center">
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5 text-center"
+              aria-hidden="true"
+            >
               🚗
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-center">
-              Particuliers
+              GPS pour particuliers
             </h3>
 
-            <p className="text-gray-600 mb-5">
-              Gardez votre véhicule sous surveillance
-              en permanence grâce à la géolocalisation
-              en temps réel.
+            <p className="text-gray-600 mb-5 leading-7">
+              Gardez votre véhicule sous surveillance grâce à une solution
+              GPS permettant de suivre sa position et ses déplacements
+              à Kinshasa et en RDC.
             </p>
 
             <ul className="space-y-2 text-gray-700">
-              <li>✓ Localisation instantanée</li>
+              <li>✓ Géolocalisation en temps réel</li>
               <li>✓ Protection anti-vol</li>
               <li>✓ Historique des trajets</li>
               <li>✓ Alertes de mouvement</li>
             </ul>
-
-          </div>
+          </article>
 
           {/* ENTREPRISES */}
 
-          <div
-           className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5 text-center">
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5 text-center"
+              aria-hidden="true"
+            >
               🏢
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-center">
-              Entreprises
+              Gestion de flotte pour entreprises
             </h3>
 
-            <p className="text-gray-600 mb-5">
-              Gérez efficacement vos véhicules,
-              équipements et ressources grâce à
-              une plateforme centralisée.
+            <p className="text-gray-600 mb-5 leading-7">
+              Centralisez le suivi de vos véhicules et de vos opérations
+              avec une plateforme de gestion de flotte conçue pour améliorer
+              le contrôle, la visibilité et les performances.
             </p>
 
             <ul className="space-y-2 text-gray-700">
-              <li>✓ Gestion de flotte</li>
-              <li>✓ Contrôle des actifs</li>
+              <li>✓ Gestion centralisée de flotte</li>
+              <li>✓ Suivi des véhicules et actifs</li>
               <li>✓ Rapports automatisés</li>
-              <li>✓ Réduction des coûts</li>
+              <li>✓ Réduction des coûts d’exploitation</li>
             </ul>
-
-          </div>
+          </article>
 
           {/* TRANSPORT */}
 
-          <div
-           className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5 text-center">
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5 text-center"
+              aria-hidden="true"
+            >
               🚚
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-center">
-              Transport & Logistique
+              Transport et logistique
             </h3>
 
-            <p className="text-gray-600 mb-5">
-              Optimisez les trajets et améliorez
-              la qualité de vos opérations de
-              transport et de livraison.
+            <p className="text-gray-600 mb-5 leading-7">
+              Suivez vos véhicules de transport, améliorez les itinéraires
+              et utilisez les données GPS pour optimiser vos opérations
+              logistiques à Kinshasa et à travers la RDC.
             </p>
 
             <ul className="space-y-2 text-gray-700">
               <li>✓ Suivi des livraisons</li>
               <li>✓ Optimisation des itinéraires</li>
               <li>✓ Contrôle du carburant</li>
-              <li>✓ Réduction du temps d'arrêt</li>
+              <li>✓ Réduction des temps d’arrêt</li>
             </ul>
-
-          </div>
+          </article>
 
           {/* GESTIONNAIRES */}
 
-          <div
-           className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5 text-center">
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5 text-center"
+              aria-hidden="true"
+            >
               📊
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-center">
-              Gestionnaires
+              Pilotage et analyse de flotte
             </h3>
 
-            <p className="text-gray-600 mb-5">
-              Prenez des décisions stratégiques
-              grâce à des données fiables et des
-              tableaux de bord avancés.
+            <p className="text-gray-600 mb-5 leading-7">
+              Exploitez les données télématiques de votre flotte grâce à
+              des tableaux de bord, rapports et indicateurs permettant
+              de suivre les performances de vos opérations.
             </p>
 
             <ul className="space-y-2 text-gray-700">
-              <li>✓ Tableaux de bord temps réel</li>
-              <li>✓ Analyse de performance</li>
+              <li>✓ Tableaux de bord en temps réel</li>
+              <li>✓ Analyse des performances</li>
               <li>✓ Rapports détaillés</li>
-              <li>✓ Indicateurs de rentabilité</li>
+              <li>✓ Indicateurs opérationnels</li>
             </ul>
-
-          </div>
+          </article>
 
         </div>
 
+        {/* ================================= */}
         {/* FONCTIONNALITÉS PRINCIPALES */}
+        {/* ================================= */}
 
         <div className="mt-24">
 
           <div className="text-center mb-16">
 
+            <span className="text-red-600 uppercase tracking-[4px] font-bold">
+              Technologie HESABU
+            </span>
+
             <h2
               className="
-              text-3xl
-              sm:text-4xl
-              lg:text-5xl
-              font-bold
-              mt-3
-              mb-5
+                text-3xl
+                sm:text-4xl
+                lg:text-5xl
+                font-bold
+                text-gray-900
+                mt-3
+                mb-5
               "
             >
-              Fonctionnalités clés
+              Fonctionnalités clés de nos solutions GPS
             </h2>
 
-            <p className="text-xl text-gray-600">
-              Une plateforme complète pour suivre,
-              analyser et sécuriser vos opérations.
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
+              Une plateforme complète pour suivre les véhicules,
+              contrôler le carburant, renforcer la sécurité
+              et analyser les performances de votre flotte en temps réel.
             </p>
 
           </div>
 
           <div
             className="
-            grid
-            grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-4
-            gap-8
+              grid
+              grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-4
+              gap-8
             "
           >
 
-            {/* Géolocalisation */}
+            {/* GÉOLOCALISATION */}
 
-            <div
+            <article
               className="
-              bg-white/90
-              backdrop-blur-md
-              p-8
-              rounded-3xl
-              shadow-lg
-              border
-              border-gray-100
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition
-              duration-300
+                bg-white/90
+                backdrop-blur-md
+                p-8
+                rounded-3xl
+                shadow-lg
+                border
+                border-gray-100
+                hover:shadow-2xl
+                hover:-translate-y-2
+                transition
+                duration-300
               "
             >
-
-              <div className="text-5xl mb-4">
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
                 📍
               </div>
 
               <h3 className="text-2xl font-bold mb-3">
-                Géolocalisation Temps Réel
+                Géolocalisation GPS en temps réel
               </h3>
 
               <p className="text-gray-600 leading-7">
-                Visualisez vos véhicules sur une carte
-                interactive avec mise à jour instantanée.
+                Visualisez la position de vos véhicules sur une carte,
+                consultez leurs déplacements et suivez votre flotte
+                en temps réel.
               </p>
+            </article>
 
-            </div>
+            {/* CARBURANT */}
 
-            {/* Carburant */}
-
-            <div
+            <article
               className="
-              bg-white/90
-              backdrop-blur-md
-              p-8
-              rounded-3xl
-              shadow-lg
-              border
-              border-gray-100
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition
-              duration-300
+                bg-white/90
+                backdrop-blur-md
+                p-8
+                rounded-3xl
+                shadow-lg
+                border
+                border-gray-100
+                hover:shadow-2xl
+                hover:-translate-y-2
+                transition
+                duration-300
               "
             >
-
-              <div className="text-5xl mb-4">
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
                 ⛽
               </div>
 
               <h3 className="text-2xl font-bold mb-3">
-                Monitoring Carburant
+                Suivi et contrôle du carburant
               </h3>
 
               <p className="text-gray-600 leading-7">
-                Contrôlez la consommation,
-                détectez les anomalies
-                et réduisez les coûts.
+                Surveillez la consommation de carburant, identifiez
+                les variations inhabituelles et disposez de données
+                pour mieux maîtriser les coûts de votre flotte.
               </p>
+            </article>
 
-            </div>
+            {/* COUPURE MOTEUR */}
 
-            {/* Coupure moteur */}
-
-            <div
+            <article
               className="
-              bg-white/90
-              backdrop-blur-md
-              p-8
-              rounded-3xl
-              shadow-lg
-              border
-              border-gray-100
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition
-              duration-300
+                bg-white/90
+                backdrop-blur-md
+                p-8
+                rounded-3xl
+                shadow-lg
+                border
+                border-gray-100
+                hover:shadow-2xl
+                hover:-translate-y-2
+                transition
+                duration-300
               "
             >
-
-              <div className="text-5xl mb-4">
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
                 🛑
               </div>
 
               <h3 className="text-2xl font-bold mb-3">
-                Coupure du moteur à distance
+                Sécurité et immobilisation à distance
               </h3>
 
               <p className="text-gray-600 leading-7">
-                En cas de vol ou d'utilisation non autorisée,
-                désactivez le moteur à distance de manière
-                sécurisée afin de protéger votre véhicule.
+                Selon l’équipement installé, certaines solutions permettent
+                de renforcer la protection du véhicule grâce à des fonctions
+                de sécurité et d’immobilisation contrôlée à distance.
               </p>
+            </article>
 
-            </div>
+            {/* ALERTES */}
 
-            {/* Alertes */}
-
-            <div
+            <article
               className="
-              bg-white/90
-              backdrop-blur-md
-              p-8
-              rounded-3xl
-              shadow-lg
-              border
-              border-gray-100
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition
-              duration-300
+                bg-white/90
+                backdrop-blur-md
+                p-8
+                rounded-3xl
+                shadow-lg
+                border
+                border-gray-100
+                hover:shadow-2xl
+                hover:-translate-y-2
+                transition
+                duration-300
               "
             >
-
-              <div className="text-5xl mb-4">
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
                 🔔
               </div>
 
               <h3 className="text-2xl font-bold mb-3">
-                Alertes Intelligentes
+                Alertes GPS intelligentes
               </h3>
 
               <p className="text-gray-600 leading-7">
-                Recevez des notifications sur les
-                excès de vitesse, sorties de zone
-                ou arrêts non autorisés.
+                Recevez des notifications concernant les excès de vitesse,
+                sorties de zone, mouvements inhabituels ou autres événements
+                définis pour votre flotte.
               </p>
-
-            </div>
+            </article>
 
           </div>
 
         </div>
 
+        {/* ================================= */}
+        {/* BLOC SEO COMPLÉMENTAIRE */}
+        {/* ================================= */}
+
+        <div className="mt-24 max-w-5xl mx-auto text-center">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Des solutions adaptées aux réalités de Kinshasa et de la RDC
+          </h2>
+
+          <p className="text-lg text-gray-700 leading-8">
+            HESABU accompagne les organisations qui souhaitent mieux suivre
+            leurs véhicules, sécuriser leurs actifs et améliorer la gestion
+            quotidienne de leur flotte. Nos solutions combinent GPS,
+            télématique et technologies IoT pour fournir des informations
+            utiles aux responsables de flotte et aux équipes opérationnelles.
+          </p>
+
+        </div>
+
+        {/* ================================= */}
         {/* AVANTAGES */}
+        {/* ================================= */}
 
-        <div className="mt-24 bg-red-600 text-white rounded-3xl p-12">
-
+        <div
+          className="
+            mt-24
+            bg-red-600
+            text-white
+            rounded-3xl
+            p-12
+          "
+          aria-label="Principales caractéristiques des solutions HESABU"
+        >
           <div className="grid md:grid-cols-4 gap-8 text-center">
 
             <div>
-              <h3
+              <p
                 className="
-                text-3xl
-                md:text-4xl
-                lg:text-5xl
-                font-bold
+                  text-3xl
+                  md:text-4xl
+                  lg:text-5xl
+                  font-bold
                 "
               >
                 24/7
-              </h3>
+              </p>
 
               <p className="mt-2">
                 Surveillance continue
@@ -421,16 +479,16 @@ function SolutionsSection() {
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-3xl
-                md:text-4xl
-                lg:text-5xl
-                font-bold
+                  text-3xl
+                  md:text-4xl
+                  lg:text-5xl
+                  font-bold
                 "
               >
                 GPS
-              </h3>
+              </p>
 
               <p className="mt-2">
                 Géolocalisation en temps réel
@@ -438,33 +496,34 @@ function SolutionsSection() {
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-3xl
-                md:text-4xl
-                lg:text-5xl
-                font-bold
+                  text-3xl
+                  md:text-4xl
+                  lg:text-5xl
+                  font-bold
                 "
               >
                 IoT
-              </h3>
+              </p>
 
               <p className="mt-2">
-                Capteurs intelligents
+                Technologies connectées
               </p>
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-3xl
-                md:text-4xl
-                lg:text-5xl
-                font-bold
+                  text-3xl
+                  md:text-4xl
+                  lg:text-5xl
+                  font-bold
                 "
+                aria-hidden="true"
               >
                 📈
-              </h3>
+              </p>
 
               <p className="mt-2">
                 Optimisation des performances
@@ -472,12 +531,9 @@ function SolutionsSection() {
             </div>
 
           </div>
-
         </div>
 
-
       </div>
-
     </section>
   );
 }
