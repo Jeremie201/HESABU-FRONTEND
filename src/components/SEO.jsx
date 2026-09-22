@@ -7,7 +7,7 @@ export default function SEO({
     "HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT en République Démocratique du Congo.",
 
   keywords =
-   "GPS RDC, GPS Kinshasa, gestion de flotte, télématique embarquée, IoT, géolocalisation, localisation véhicules, gestion à distance, suivi en temps réel, suivi de véhicules, HESABU, HESABU SARLU, IoT, Tracking véhicule, Télématique, HESABU, Kinshasa, République Démocratique du Congo",
+    "GPS RDC, GPS Kinshasa, gestion de flotte Kinshasa, gestion de flotte RDC, télématique embarquée, IoT RDC, géolocalisation, localisation véhicules, gestion à distance, suivi en temps réel, suivi de véhicules, tracking véhicule, HESABU, HESABU SARLU, Kinshasa, République Démocratique du Congo",
 
   image = "https://hesabudrc.com/hesabusend.png",
 
@@ -15,9 +15,12 @@ export default function SEO({
 
   noIndex = false,
 }) {
-  const schema = {
+  const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+
+    "@type": "LocalBusiness",
+
+    "@id": "https://hesabudrc.com/#business",
 
     name: "HESABU SARLU",
 
@@ -25,10 +28,10 @@ export default function SEO({
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image,
+    image: "https://hesabudrc.com/hesabusend.png",
 
     description:
-      "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
+      "Entreprise congolaise spécialisée dans les solutions GPS, la géolocalisation, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT à Kinshasa et en République Démocratique du Congo.",
 
     telephone: "+243839573532",
 
@@ -38,9 +41,11 @@ export default function SEO({
       "@type": "PostalAddress",
 
       streetAddress:
-        "11A3 Avenue Golf, Anciennes Galeries Présidentielles",
+        "11A3 Avenue Golf, Anciennes Galeries Présidentielles, Gombe",
 
-      addressLocality: "Kinshasa-Gombe",
+      addressLocality: "Kinshasa",
+
+      addressRegion: "Kinshasa",
 
       addressCountry: "CD",
     },
@@ -54,6 +59,8 @@ export default function SEO({
       "@type": "ContactPoint",
 
       telephone: "+243839573532",
+
+      email: "iot@hesaburdc.com",
 
       contactType: "customer service",
 
@@ -69,11 +76,14 @@ export default function SEO({
   return (
     <Helmet>
 
-      {/* Langue du document */}
+      {/* ================================ */}
+      {/* LANGUE */}
+      {/* ================================ */}
+
       <html lang="fr" />
 
       {/* ================================ */}
-      {/* SEO principal */}
+      {/* SEO PRINCIPAL */}
       {/* ================================ */}
 
       <title>{title}</title>
@@ -107,13 +117,17 @@ export default function SEO({
         content="#dc2626"
       />
 
+      {/* ================================ */}
+      {/* URL CANONIQUE */}
+      {/* ================================ */}
+
       <link
         rel="canonical"
         href={url}
       />
 
       {/* ================================ */}
-      {/* Open Graph */}
+      {/* OPEN GRAPH */}
       {/* Facebook / WhatsApp / LinkedIn */}
       {/* ================================ */}
 
@@ -149,7 +163,7 @@ export default function SEO({
 
       <meta
         property="og:image:alt"
-        content="HESABU SARLU - Solutions GPS et gestion de flotte en RDC"
+        content="HESABU SARLU - Solutions GPS et gestion de flotte à Kinshasa et en RDC"
       />
 
       <meta
@@ -168,7 +182,7 @@ export default function SEO({
       />
 
       {/* ================================ */}
-      {/* Twitter / X */}
+      {/* TWITTER / X */}
       {/* ================================ */}
 
       <meta
@@ -193,16 +207,18 @@ export default function SEO({
 
       <meta
         name="twitter:image:alt"
-        content="HESABU SARLU - Solutions GPS et gestion de flotte en RDC"
+        content="HESABU SARLU - Solutions GPS et gestion de flotte à Kinshasa et en RDC"
       />
 
       {/* ================================ */}
-      {/* Schema.org */}
+      {/* SCHEMA.ORG LOCAL BUSINESS */}
       {/* ================================ */}
 
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
+      {!noIndex && (
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+      )}
 
     </Helmet>
   );
