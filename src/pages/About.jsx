@@ -7,80 +7,91 @@ function About() {
   return (
     <>
       <SEO
-        title="À propos de HESABU SARLU | Expert GPS et Gestion de Flotte en RDC"
-        description="Découvrez HESABU SARLU, entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT en République Démocratique du Congo."
-        keywords="HESABU SARLU, entreprise GPS RDC, gestion de flotte, télématique, IoT, géolocalisation, à propos"
+        title="À propos de HESABU | Entreprise GPS à Kinshasa et en RDC"
+        description="Découvrez HESABU SARLU, entreprise congolaise basée à Kinshasa spécialisée dans les solutions GPS, la géolocalisation, la gestion de flotte, la télématique et les technologies IoT en RDC."
+        keywords="HESABU SARLU, entreprise GPS Kinshasa, entreprise GPS RDC, gestion de flotte Kinshasa, télématique RDC, IoT RDC, géolocalisation véhicule"
+        image="https://hesabudrc.com/hesabusend.png"
+        url="https://hesabudrc.com/about"
       />
+
       <Navbar />
 
+      {/* ================================= */}
       {/* HERO */}
+      {/* ================================= */}
 
       <section
         className="
-        bg-gradient-to-br
-        from-red-700
-        via-red-600
-        to-black
-        text-white
-        py-16
-        md:py-24
+          bg-gradient-to-br
+          from-red-700
+          via-red-600
+          to-black
+          text-white
+          py-16
+          md:py-24
         "
-        >
-
+        aria-labelledby="about-title"
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
 
-          <span className="uppercase tracking-[4px] font-semibold">
+          <span className="uppercase tracking-[4px] font-semibold text-red-200">
             À propos de HESABU
           </span>
 
           <h1
+            id="about-title"
             className="
-            text-4xl
-            sm:text-5xl
-            lg:text-6xl
-            font-extrabold
-            mt-4
-            mb-6
-            leading-tight
+              text-4xl
+              sm:text-5xl
+              lg:text-6xl
+              font-extrabold
+              mt-4
+              mb-6
+              leading-tight
             "
-            >
-            Votre partenaire technologique
+          >
+            HESABU SARLU,
+            <br />
+            spécialiste des solutions GPS
+            <br />
+            à Kinshasa et en RDC
           </h1>
 
           <p
             className="
-            text-lg
-            md:text-xl
-            max-w-4xl
-            mx-auto
-            leading-7
-            md:leading-8
-            px-2
+              text-lg
+              md:text-xl
+              max-w-4xl
+              mx-auto
+              leading-7
+              md:leading-8
+              px-2
             "
-            >
-            HESABU SARLU accompagne les entreprises,
-            institutions, ONG et particuliers grâce
-            à des solutions GPS, IoT et télématiques
-            innovantes permettant d'améliorer la
-            sécurité, la productivité et la rentabilité.
+          >
+            HESABU SARLU accompagne les entreprises, institutions, ONG,
+            transporteurs et particuliers à Kinshasa et partout en
+            République Démocratique du Congo avec des solutions GPS,
+            de géolocalisation, de gestion de flotte, de télématique
+            embarquée et de technologies IoT.
           </p>
 
         </div>
-
       </section>
 
-      {/* PRESENTATION */}
+      {/* ================================= */}
+      {/* PRÉSENTATION */}
+      {/* ================================= */}
 
       <section
         className="relative py-24 overflow-hidden"
         style={{
-            backgroundImage: `url(${mapBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+          backgroundImage: `url(${mapBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
-        >
-
+        aria-labelledby="about-presentation-title"
+      >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
@@ -88,16 +99,18 @@ function About() {
 
           <div
             className="
-            grid
-            grid-cols-1
-            lg:grid-cols-2
-            gap-10
-            lg:gap-16
+              grid
+              grid-cols-1
+              lg:grid-cols-2
+              gap-10
+              lg:gap-16
             "
-            >
+          >
 
-            <div
-                className="
+            {/* QUI SOMMES-NOUS */}
+
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 rounded-3xl
@@ -106,56 +119,73 @@ function About() {
                 shadow-xl
                 border
                 border-white/50
-                "
-                >
+              "
+            >
               <h2
+                id="about-presentation-title"
                 className="
-                text-3xl
-                md:text-4xl
-                font-bold
-                mb-6
+                  text-3xl
+                  md:text-4xl
+                  font-bold
+                  mb-6
                 "
-                >
-                Qui sommes-nous ?
+              >
+                Qui est HESABU SARLU ?
               </h2>
 
               <p
                 className="
-                text-base
-                md:text-lg
-                text-gray-700
-                leading-7
-                md:leading-8
-                text-justify
+                  text-base
+                  md:text-lg
+                  text-gray-700
+                  leading-7
+                  md:leading-8
                 "
-                >
-                HESABU SARLU est une entreprise congolaise
-                spécialisée dans les solutions GPS,
-                la gestion intelligente de flotte,
-                la télématique embarquée et les
-                technologies IoT.
-
-                <br /><br />
-
-                Nous aidons les organisations à suivre,
-                sécuriser et optimiser leurs véhicules,
-                équipements et opérations grâce à des
-                technologies modernes de géolocalisation
-                et d'analyse de données.
-
-                <br /><br />
-
-                Notre expertise permet à nos clients
-                d'améliorer leur efficacité opérationnelle,
-                de réduire leurs coûts et de prendre
-                des décisions basées sur des données
-                fiables en temps réel.
+              >
+                HESABU SARLU est une entreprise congolaise spécialisée
+                dans les solutions GPS, la géolocalisation des véhicules,
+                la gestion intelligente de flotte, la télématique embarquée
+                et les technologies IoT.
               </p>
 
-            </div>
-
-            <div
+              <p
                 className="
+                  text-base
+                  md:text-lg
+                  text-gray-700
+                  leading-7
+                  md:leading-8
+                  mt-5
+                "
+              >
+                Basée à Kinshasa, HESABU accompagne les organisations
+                qui souhaitent suivre, sécuriser et optimiser leurs véhicules,
+                équipements et opérations grâce à des technologies modernes
+                de géolocalisation et d’analyse de données.
+              </p>
+
+              <p
+                className="
+                  text-base
+                  md:text-lg
+                  text-gray-700
+                  leading-7
+                  md:leading-8
+                  mt-5
+                "
+              >
+                Nos solutions permettent aux responsables de flotte de
+                disposer d’informations utiles sur les déplacements,
+                l’utilisation des véhicules, la sécurité, les performances
+                opérationnelles et les événements importants de leur flotte.
+              </p>
+
+            </article>
+
+            {/* MISSION ET VISION */}
+
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 rounded-3xl
@@ -164,43 +194,148 @@ function About() {
                 shadow-xl
                 border
                 border-white/50
-                "
-                >
-
-              <h2
-                className="
-                text-3xl
-                md:text-4xl
-                font-bold
-                mb-6
-                "
-                >
-                Notre Mission
+              "
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Notre mission
               </h2>
 
               <p className="text-lg text-gray-700 leading-8">
-                Fournir des solutions technologiques
-                innovantes permettant aux entreprises
-                et particuliers de sécuriser leurs
-                véhicules, optimiser leurs opérations
-                et améliorer leurs performances.
+                Fournir aux entreprises, institutions et particuliers
+                à Kinshasa et en RDC des solutions technologiques fiables
+                pour suivre leurs véhicules, renforcer la sécurité,
+                optimiser leurs opérations et améliorer la gestion
+                de leurs actifs.
               </p>
 
               <div className="border-t my-8"></div>
 
-              <h2 className="text-4xl font-bold mb-6">
-                Notre Vision
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Notre vision
               </h2>
 
               <p className="text-lg text-gray-700 leading-8">
-                Devenir une référence en Afrique
-                centrale dans les domaines du GPS,
-                de l'IoT et de la transformation
-                numérique appliquée à la mobilité
-                et à la gestion des actifs.
+                Contribuer au développement de la mobilité connectée
+                et de la transformation numérique en République
+                Démocratique du Congo et en Afrique centrale grâce
+                aux technologies GPS, IoT et télématiques.
               </p>
 
-            </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================================= */}
+      {/* EXPERTISE */}
+      {/* ================================= */}
+
+      <section className="py-24 bg-white">
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+
+          <div className="text-center mb-16">
+
+            <span className="text-red-600 uppercase font-bold tracking-[4px]">
+              Notre expertise
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+              Des technologies au service de la mobilité et de la flotte
+            </h2>
+
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
+              HESABU combine géolocalisation GPS, télématique embarquée,
+              technologies IoT et analyse de données pour proposer des
+              solutions adaptées aux besoins des entreprises et gestionnaires
+              de flotte à Kinshasa et en RDC.
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <article className="bg-gray-50 p-8 rounded-3xl shadow-lg">
+
+              <div
+                className="text-5xl mb-5"
+                aria-hidden="true"
+              >
+                📍
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4">
+                Géolocalisation GPS
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Suivi des véhicules en temps réel, historique des trajets
+                et visibilité sur les déplacements.
+              </p>
+
+            </article>
+
+            <article className="bg-gray-50 p-8 rounded-3xl shadow-lg">
+
+              <div
+                className="text-5xl mb-5"
+                aria-hidden="true"
+              >
+                🚚
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4">
+                Gestion de flotte
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Outils permettant de mieux suivre l’utilisation,
+                les performances et les opérations des véhicules.
+              </p>
+
+            </article>
+
+            <article className="bg-gray-50 p-8 rounded-3xl shadow-lg">
+
+              <div
+                className="text-5xl mb-5"
+                aria-hidden="true"
+              >
+                📡
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4">
+                IoT et télématique
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Technologies connectées et données télématiques
+                pour améliorer la supervision des opérations.
+              </p>
+
+            </article>
+
+            <article className="bg-gray-50 p-8 rounded-3xl shadow-lg">
+
+              <div
+                className="text-5xl mb-5"
+                aria-hidden="true"
+              >
+                🛡️
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4">
+                Sécurité automobile
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                Géolocalisation, alertes et outils de surveillance
+                pour renforcer la protection des véhicules.
+              </p>
+
+            </article>
 
           </div>
 
@@ -208,48 +343,53 @@ function About() {
 
       </section>
 
+      {/* ================================= */}
       {/* VALEURS */}
+      {/* ================================= */}
 
       <section
         className="relative py-24 overflow-hidden"
         style={{
-            backgroundImage: `url(${mapBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+          backgroundImage: `url(${mapBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
-        >
-
+        aria-labelledby="values-title"
+      >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
 
-
           <div className="text-center mb-16">
 
-            <h2 className="text-5xl font-bold mb-4">
-              Nos Valeurs
+            <h2
+              id="values-title"
+              className="text-4xl md:text-5xl font-bold mb-4"
+            >
+              Nos valeurs
             </h2>
 
-            <p className="text-xl text-gray-800">
-              Les principes qui guident chacune de nos actions.
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-8">
+              Les principes qui orientent notre travail et notre relation
+              avec les clients et partenaires de HESABU.
             </p>
 
           </div>
 
           <div
             className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-4
-            gap-8
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-4
+              gap-8
             "
-            >
+          >
 
-            <div
-                className="
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 p-6
@@ -263,22 +403,27 @@ function About() {
                 hover:shadow-2xl
                 transition
                 duration-300
-                "
-                >
-              <div className="text-5xl mb-4">🚀</div>
+              "
+            >
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
+                🚀
+              </div>
 
               <h3 className="text-2xl font-bold mb-3">
                 Innovation
               </h3>
 
-              <p className="text-gray-600">
-                Des solutions modernes adaptées
-                aux défis actuels.
+              <p className="text-gray-600 leading-7">
+                Des solutions technologiques conçues pour répondre
+                aux besoins actuels de mobilité et de gestion.
               </p>
-            </div>
+            </article>
 
-            <div
-                className="
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 p-6
@@ -292,22 +437,27 @@ function About() {
                 hover:shadow-2xl
                 transition
                 duration-300
-                "
-                >
-              <div className="text-5xl mb-4">🤝</div>
+              "
+            >
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
+                🤝
+              </div>
 
               <h3 className="text-2xl font-bold mb-3">
                 Confiance
               </h3>
 
-              <p className="text-gray-600">
-                Une relation durable basée
-                sur la transparence.
+              <p className="text-gray-600 leading-7">
+                Une relation professionnelle fondée sur la transparence,
+                l’accompagnement et la continuité du service.
               </p>
-            </div>
+            </article>
 
-            <div
-                className="
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 p-6
@@ -321,22 +471,27 @@ function About() {
                 hover:shadow-2xl
                 transition
                 duration-300
-                "
-                >
-              <div className="text-5xl mb-4">🛡️</div>
+              "
+            >
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
+                🛡️
+              </div>
 
               <h3 className="text-2xl font-bold mb-3">
                 Sécurité
               </h3>
 
-              <p className="text-gray-600">
-                La protection de vos actifs
-                est notre priorité.
+              <p className="text-gray-600 leading-7">
+                La protection et le suivi des véhicules et actifs
+                occupent une place centrale dans nos solutions.
               </p>
-            </div>
+            </article>
 
-            <div
-                className="
+            <article
+              className="
                 bg-white/90
                 backdrop-blur-md
                 p-6
@@ -350,98 +505,144 @@ function About() {
                 hover:shadow-2xl
                 transition
                 duration-300
-                "
-                >
-              <div className="text-5xl mb-4">⭐</div>
+              "
+            >
+              <div
+                className="text-5xl mb-4"
+                aria-hidden="true"
+              >
+                ⭐
+              </div>
 
               <h3 className="text-2xl font-bold mb-3">
                 Excellence
               </h3>
 
-              <p className="text-gray-600">
-                Un service professionnel
-                et de qualité.
+              <p className="text-gray-600 leading-7">
+                Une attention portée à la qualité des solutions,
+                du déploiement et de l’accompagnement client.
               </p>
-            </div>
+            </article>
 
           </div>
+
+        </div>
+      </section>
+
+      {/* ================================= */}
+      {/* POSITIONNEMENT LOCAL */}
+      {/* ================================= */}
+
+      <section className="py-24 bg-gray-50">
+
+        <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
+
+          <span className="text-red-600 uppercase font-bold tracking-[4px]">
+            Kinshasa • RDC
+          </span>
+
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+            Une entreprise technologique congolaise proche de ses clients
+          </h2>
+
+          <p className="text-lg md:text-xl text-gray-700 leading-8">
+            Depuis Kinshasa, HESABU développe et déploie des solutions
+            destinées aux besoins de mobilité, de sécurité et de gestion
+            de flotte en République Démocratique du Congo. Notre approche
+            associe expertise locale, technologies GPS, télématique
+            et IoT afin de proposer des solutions adaptées aux réalités
+            opérationnelles de nos clients.
+          </p>
 
         </div>
 
       </section>
 
-      {/* CHIFFRES */}
+      {/* ================================= */}
+      {/* CHIFFRES / TECHNOLOGIES */}
+      {/* ================================= */}
 
-      <section className="py-24 bg-red-600 text-white">
-
+      <section
+        className="py-24 bg-red-600 text-white"
+        aria-label="Technologies et services HESABU"
+      >
         <div className="max-w-7xl mx-auto px-8">
 
           <div
             className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-4
-            gap-8
-            text-center
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-4
+              gap-8
+              text-center
             "
-            >
+          >
 
             <div>
-              <h3
+              <p
                 className="
-                text-4xl
-                md:text-5xl
-                lg:text-6xl
-                font-bold
+                  text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                  font-bold
                 "
-                >
-                24/7</h3>
+              >
+                24/7
+              </p>
+
               <p className="mt-3 text-xl">
                 Surveillance continue
               </p>
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-4xl
-                md:text-5xl
-                lg:text-6xl
-                font-bold
+                  text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                  font-bold
                 "
-                >
-                GPS</h3>
+              >
+                GPS
+              </p>
+
               <p className="mt-3 text-xl">
-                Géolocalisation temps réel
+                Géolocalisation en temps réel
               </p>
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-4xl
-                md:text-5xl
-                lg:text-6xl
-                font-bold
+                  text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                  font-bold
                 "
-                >
-                IoT</h3>
+              >
+                IoT
+              </p>
+
               <p className="mt-3 text-xl">
-                Solutions connectées
+                Technologies connectées
               </p>
             </div>
 
             <div>
-              <h3
+              <p
                 className="
-                text-4xl
-                md:text-5xl
-                lg:text-6xl
-                font-bold
+                  text-4xl
+                  md:text-5xl
+                  lg:text-6xl
+                  font-bold
                 "
-                >
-                📈</h3>
+                aria-hidden="true"
+              >
+                📈
+              </p>
+
               <p className="mt-3 text-xl">
                 Optimisation des performances
               </p>
@@ -450,7 +651,6 @@ function About() {
           </div>
 
         </div>
-
       </section>
 
       <Footer />
