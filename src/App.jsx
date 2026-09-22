@@ -12,6 +12,7 @@ import Client from "./pages/Client";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Ressources from "./pages/Ressources";
+
 import ArticleGPS from "./pages/articles/ArticleGPS";
 import ArticleCarburant from "./pages/articles/ArticleCarburant";
 import ArticleFlotte from "./pages/articles/ArticleFlotte";
@@ -31,25 +32,61 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        {/* Pages principales */}
 
-        <Route path="/services" element={<Services />} />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-        <Route path="/solutions" element={<Solutions />} />
+        <Route
+          path="/services"
+          element={<Services />}
+        />
 
-        <Route path="/ressources" element={<Ressources />} />
+        <Route
+          path="/solutions"
+          element={<Solutions />}
+        />
 
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/ressources"
+          element={<Ressources />}
+        />
 
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/about"
+          element={<About />}
+        />
 
-        <Route path="/devis" element={<Devis />} />
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
 
-        <Route path="/client" element={<Client />} />
+        <Route
+          path="/devis"
+          element={<Devis />}
+        />
 
-        <Route path="/login" element={<Login />} />
+        {/* Espace client */}
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/client"
+          element={<Client />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
+        />
+
+        {/* Articles */}
 
         <Route
           path="/ressources/gps-professionnel"
