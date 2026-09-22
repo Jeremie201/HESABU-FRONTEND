@@ -8,9 +8,9 @@ function Home() {
   return (
     <>
       <SEO
-        title="HESABU SARLU | Solutions GPS et Gestion Intelligente de Flotte en RDC"
-        description="HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT."
-        keywords="GPS RDC, GPS Kinshasa, gestion de flotte, télématique embarquée, IoT, géolocalisation, localisation véhicules, gestion à distance, suivi en temps réel, suivi de véhicules, HESABU, HESABU SARLU, IoT, Tracking véhicule, Télématique, HESABU, Kinshasa, République Démocratique du Congo"
+        title="HESABU SARLU | GPS et Gestion de Flotte en RDC"
+        description="HESABU SARLU propose des solutions GPS, de géolocalisation et de gestion de flotte en RDC pour suivre les véhicules, sécuriser les actifs et optimiser les opérations."
+        keywords="GPS RDC, gestion de flotte RDC, géolocalisation Kinshasa, suivi véhicule RDC, télématique RDC, HESABU SARLU"
         image="https://hesabudrc.com/hesabusend.png"
         url="https://hesabudrc.com/"
       />
