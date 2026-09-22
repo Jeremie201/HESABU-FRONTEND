@@ -7,7 +7,7 @@ export default function SEO({
     "HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT en République Démocratique du Congo.",
 
   keywords =
-    "GPS RDC, Géolocalisation, Gestion de flotte, IoT, Tracking véhicule, Télématique, HESABU, Kinshasa",
+   "GPS RDC, GPS Kinshasa, gestion de flotte, télématique embarquée, IoT, géolocalisation, localisation véhicules, gestion à distance, suivi en temps réel, suivi de véhicules, HESABU, HESABU SARLU, IoT, Tracking véhicule, Télématique, HESABU, Kinshasa, République Démocratique du Congo",
 
   image = "https://hesabudrc.com/hesabusend.png",
 
