@@ -8,7 +8,7 @@ import rentreeImage from "../assets/ads/rentree-scolaire.jpg";
 import { useEffect, useState } from "react";
 
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
-const CAMPAIGN_END = new Date("2026-09-15T23:59:59");
+const CAMPAIGN_END = new Date("2026-10-10T23:59:59");
 
 const AUTO_SLIDE_TIME = 8000;
 
