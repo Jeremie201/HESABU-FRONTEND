@@ -12,6 +12,8 @@ export default function SEO({
   image = "https://hesabudrc.com/hesabusend.png",
 
   url = "https://hesabudrc.com/",
+
+  noIndex = false,
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -23,7 +25,7 @@ export default function SEO({
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image: image,
+    image,
 
     description:
       "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
@@ -70,9 +72,9 @@ export default function SEO({
       {/* Langue du document */}
       <html lang="fr" />
 
-      {/* ================================= */}
+      {/* ================================ */}
       {/* SEO principal */}
-      {/* ================================= */}
+      {/* ================================ */}
 
       <title>{title}</title>
 
@@ -93,7 +95,11 @@ export default function SEO({
 
       <meta
         name="robots"
-        content="index, follow"
+        content={
+          noIndex
+            ? "noindex, nofollow"
+            : "index, follow"
+        }
       />
 
       <meta
@@ -106,10 +112,10 @@ export default function SEO({
         href={url}
       />
 
-      {/* ================================= */}
+      {/* ================================ */}
       {/* Open Graph */}
       {/* Facebook / WhatsApp / LinkedIn */}
-      {/* ================================= */}
+      {/* ================================ */}
 
       <meta
         property="og:type"
@@ -161,9 +167,9 @@ export default function SEO({
         content="fr_CD"
       />
 
-      {/* ================================= */}
+      {/* ================================ */}
       {/* Twitter / X */}
-      {/* ================================= */}
+      {/* ================================ */}
 
       <meta
         name="twitter:card"
@@ -190,9 +196,9 @@ export default function SEO({
         content="HESABU SARLU - Solutions GPS et gestion de flotte en RDC"
       />
 
-      {/* ================================= */}
+      {/* ================================ */}
       {/* Schema.org */}
-      {/* ================================= */}
+      {/* ================================ */}
 
       <script type="application/ld+json">
         {JSON.stringify(schema)}
