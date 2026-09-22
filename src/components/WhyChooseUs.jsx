@@ -1,131 +1,154 @@
 import mapBg from "../assets/map-bg.png";
+
 function WhyChooseUs() {
   return (
     <section
-        className="relative py-24 overflow-hidden"
-        style={{
-            backgroundImage: `url(${mapBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-        }}
-        >
-    {/* Overlay blanc transparent */}
-
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
+      className="relative py-24 overflow-hidden"
+      style={{
+        backgroundImage: `url(${mapBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      aria-labelledby="why-hesabu-title"
+    >
+      {/* Overlay blanc transparent */}
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
 
         {/* TITRE */}
-
         <div className="text-center mb-20">
 
           <span className="text-red-600 uppercase font-bold tracking-[4px]">
-            Pourquoi HESABU ?
+            Pourquoi choisir HESABU ?
           </span>
 
-          <h2 className="text-5xl font-bold mt-4 mb-6">
-            Une technologie qui protège votre activité
+          <h2
+            id="why-hesabu-title"
+            className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+          >
+            Une gestion de flotte GPS plus intelligente en RDC
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Nos solutions GPS et IoT permettent de réduire les coûts,
-            améliorer la productivité et renforcer la sécurité de votre flotte
-            grâce à une surveillance intelligente en temps réel.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-8">
+            Les solutions GPS, télématiques et IoT de HESABU permettent
+            aux entreprises en République Démocratique du Congo de suivre
+            leurs véhicules en temps réel, réduire leurs coûts
+            d’exploitation, améliorer la productivité et renforcer
+            la sécurité de leur flotte automobile.
           </p>
 
         </div>
 
         {/* AVANTAGES */}
-
         <div className="grid lg:grid-cols-2 gap-8">
 
-          <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-3xl p-10 shadow-xl">
+          {/* RÉDUCTION DES COÛTS */}
+          <article className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-3xl p-10 shadow-xl">
 
-            <div className="text-6xl mb-6">
+            <div
+              className="text-6xl mb-6"
+              aria-hidden="true"
+            >
               💰
             </div>
 
             <h3 className="text-3xl font-bold mb-4">
-              Réduction des coûts
+              Réduction des coûts de votre flotte
             </h3>
 
             <p className="text-lg leading-8">
-              Réduisez la consommation de carburant,
-              les trajets inutiles, les pertes de temps
-              et les dépenses liées aux vols.
+              Analysez les déplacements de vos véhicules, réduisez
+              les trajets inutiles, surveillez la consommation de carburant
+              et limitez les dépenses liées aux pertes, aux abus
+              et aux utilisations non autorisées.
             </p>
 
-          </div>
+          </article>
 
-          <div className="bg-gray-100 rounded-3xl p-10 shadow-lg">
+          {/* PRODUCTIVITÉ */}
+          <article className="bg-gray-100 rounded-3xl p-10 shadow-lg">
 
-            <div className="text-6xl mb-6">
+            <div
+              className="text-6xl mb-6"
+              aria-hidden="true"
+            >
               🚀
             </div>
 
             <h3 className="text-3xl font-bold mb-4">
-              Productivité accrue
+              Productivité et optimisation des trajets
             </h3>
 
             <p className="text-lg text-gray-700 leading-8">
-              Optimisez les itinéraires,
-              améliorez la planification
-              et augmentez les performances
-              de vos équipes mobiles.
+              Utilisez les données de géolocalisation GPS pour mieux
+              organiser les déplacements, optimiser les itinéraires,
+              améliorer la planification et suivre plus efficacement
+              les activités de vos équipes mobiles.
             </p>
 
-          </div>
+          </article>
 
-          <div className="bg-gray-100 rounded-3xl p-10 shadow-lg">
+          {/* SÉCURITÉ */}
+          <article className="bg-gray-100 rounded-3xl p-10 shadow-lg">
 
-            <div className="text-6xl mb-6">
+            <div
+              className="text-6xl mb-6"
+              aria-hidden="true"
+            >
               🔒
             </div>
 
             <h3 className="text-3xl font-bold mb-4">
-              Sécurité renforcée
+              Sécurité et géolocalisation des véhicules
             </h3>
 
             <p className="text-lg text-gray-700 leading-8">
-              Géolocalisation permanente,
-              alertes intelligentes,
-              historique des déplacements
-              et protection contre le vol.
+              Suivez la position de vos véhicules, consultez leur historique
+              de déplacement et recevez des alertes intelligentes pour
+              améliorer la sécurité de votre flotte et réagir rapidement
+              aux situations anormales.
             </p>
 
-          </div>
+          </article>
 
-          <div className="bg-gradient-to-r from-black to-red-700 text-white rounded-3xl p-10 shadow-xl">
+          {/* DONNÉES */}
+          <article className="bg-gradient-to-r from-black to-red-700 text-white rounded-3xl p-10 shadow-xl">
 
-            <div className="text-6xl mb-6">
+            <div
+              className="text-6xl mb-6"
+              aria-hidden="true"
+            >
               📊
             </div>
 
             <h3 className="text-3xl font-bold mb-4">
-              Décisions en temps réel
+              Données et décisions en temps réel
             </h3>
 
             <p className="text-lg leading-8">
-              Consultez des tableaux de bord,
-              des rapports automatiques
-              et des indicateurs précis
-              pour prendre les meilleures décisions.
+              Consultez vos tableaux de bord, rapports automatiques
+              et indicateurs de performance afin de mieux comprendre
+              l’utilisation de votre flotte et prendre des décisions
+              basées sur des données précises.
             </p>
 
-          </div>
+          </article>
 
         </div>
 
         {/* STATISTIQUES */}
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mt-24">
+        <div
+          className="grid grid-cols-2 lg:grid-cols-4 gap-10 mt-24"
+          aria-label="Quelques chiffres sur les solutions HESABU"
+        >
 
           <div className="text-center">
 
-            <h3 className="text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
               24/7
-            </h3>
+            </p>
 
             <p className="mt-3 text-gray-600">
               Surveillance continue
@@ -135,21 +158,21 @@ function WhyChooseUs() {
 
           <div className="text-center">
 
-            <h3 className="text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
               100%
-            </h3>
+            </p>
 
             <p className="mt-3 text-gray-600">
-              Géolocalisation temps réel
+              Géolocalisation en temps réel
             </p>
 
           </div>
 
           <div className="text-center">
 
-            <h3 className="text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
               +50
-            </h3>
+            </p>
 
             <p className="mt-3 text-gray-600">
               Véhicules connectés
@@ -159,9 +182,9 @@ function WhyChooseUs() {
 
           <div className="text-center">
 
-            <h3 className="text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
               99%
-            </h3>
+            </p>
 
             <p className="mt-3 text-gray-600">
               Satisfaction client
