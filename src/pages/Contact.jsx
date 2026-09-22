@@ -7,12 +7,17 @@ function Contact() {
   return (
     <>
       <SEO
-        title="Contact | HESABU SARLU"
-        description="Contactez HESABU SARLU pour vos besoins en solutions GPS, gestion de flotte, télématique embarquée et IoT en RDC."
-        keywords="contact HESABU, GPS RDC, gestion de flotte, support client, IoT RDC"
+        title="Contact HESABU | GPS et Gestion de Flotte à Kinshasa"
+        description="Contactez HESABU SARLU à Kinshasa pour vos besoins en solutions GPS, géolocalisation de véhicules, gestion de flotte, télématique et technologies IoT en République Démocratique du Congo."
+        keywords="contact HESABU Kinshasa, GPS Kinshasa, entreprise GPS Kinshasa, gestion de flotte Kinshasa, géolocalisation véhicule Kinshasa, télématique RDC, IoT RDC, HESABU RDC"
+        image="https://hesabudrc.com/hesabusend.png"
+        url="https://hesabudrc.com/contact"
       />
+
       <Navbar />
+
       <ContactSection />
+
       <Footer />
     </>
   );
