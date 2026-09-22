@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hesaburdc.com/sitemap.xml
+Disallow: /login
+Disallow: /dashboard
+Disallow: /client
+
+Sitemap: https://hesabudrc.com/sitemap.xml
