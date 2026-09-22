@@ -1,4 +1,5 @@
 import mapBg from "../assets/map-bg.png";
+
 function ServicesSection() {
   return (
     <section
@@ -9,249 +10,290 @@ function ServicesSection() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      aria-labelledby="services-expertise-title"
     >
-        {/* Overlay */}
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
-
-      <div className="
-        relative
-        z-10
-        max-w-7xl
-        mx-auto
-        px-6
-        md:px-8
-        ">
-
-        {/* Titre */}
-
+      <div
+        className="
+          relative
+          z-10
+          max-w-7xl
+          mx-auto
+          px-6
+          md:px-8
+        "
+      >
+        {/* TITRE */}
         <div className="text-center mb-16">
-
           <span className="text-red-600 font-bold uppercase tracking-[4px]">
-            Nos Expertises
+            Nos expertises
           </span>
 
-          <h2 className="
-        text-3xl
-        sm:text-4xl
-        lg:text-5xl
-        font-bold
-        text-gray-900
-        mt-3
-        mb-4
-        ">
-            Nos Services
+          <h2
+            id="services-expertise-title"
+            className="
+              text-3xl
+              sm:text-4xl
+              lg:text-5xl
+              font-bold
+              text-gray-900
+              mt-3
+              mb-4
+            "
+          >
+            Services GPS et Gestion de Flotte à Kinshasa et en RDC
           </h2>
 
-          <p className="
-        text-lg
-        md:text-xl
-        text-gray-800
-        max-w-3xl
-        mx-auto
-        leading-8
-        ">
-            Nous proposons des solutions innovantes de géolocalisation,
-            de gestion de flotte et de sécurité connectée afin
-            d'améliorer la performance de votre entreprise.
+          <p
+            className="
+              text-lg
+              md:text-xl
+              text-gray-800
+              max-w-4xl
+              mx-auto
+              leading-8
+            "
+          >
+            HESABU SARLU accompagne les entreprises, institutions,
+            transporteurs et particuliers à Kinshasa et partout en
+            République Démocratique du Congo avec des solutions de
+            géolocalisation GPS, de gestion de flotte, de sécurité automobile,
+            de suivi carburant et de télématique connectée.
           </p>
-
         </div>
 
-        {/* Cartes */}
-
-        <div className="
-        grid
-        grid-cols-1
-        sm:grid-cols-2
-        lg:grid-cols-3
-        gap-8
-        ">
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+        {/* CARTES */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            gap-8
+          "
+        >
+          {/* GÉOLOCALISATION GPS */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               📍
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Géolocalisation GPS
+              Géolocalisation GPS des véhicules
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Suivez vos véhicules en temps réel,
-              consultez leur historique et optimisez
-              tous vos déplacements.
+              Suivez vos véhicules en temps réel à Kinshasa et en RDC,
+              consultez leur historique de déplacement, visualisez leurs
+              positions et améliorez l’organisation de vos trajets.
             </p>
+          </article>
 
-          </div>
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+          {/* ANTI-VOL */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               🔒
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Sécurité Anti-vol
+              Sécurité anti-vol et protection automobile
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Localisation instantanée,
-              alertes intelligentes et
-              possibilité d'arrêt moteur à distance.
+              Renforcez la sécurité de vos véhicules grâce à la localisation
+              instantanée, aux alertes intelligentes, au suivi des mouvements
+              et aux fonctions de protection adaptées à votre installation.
             </p>
+          </article>
 
-          </div>
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+          {/* GESTION DE FLOTTE */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               🚚
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Gestion de Flotte
+              Gestion intelligente de flotte
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Analyse des trajets,
-              consommation carburant,
-              temps d'arrêt et productivité.
+              Analysez les trajets, les temps d’arrêt, l’utilisation des
+              véhicules et les performances de votre flotte afin de mieux
+              contrôler les opérations et réduire les coûts d’exploitation.
             </p>
+          </article>
 
-          </div>
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+          {/* ALERTES */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               🔔
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Alertes Intelligentes
+              Alertes GPS intelligentes
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Notifications automatiques
-              sur les excès de vitesse,
-              sorties de zone et démarrages.
+              Recevez des notifications sur les excès de vitesse, sorties de
+              zone, démarrages, arrêts prolongés et autres événements utiles
+              pour surveiller votre flotte en temps réel.
             </p>
+          </article>
 
-          </div>
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+          {/* MAINTENANCE */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               🛠️
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Maintenance Préventive
+              Maintenance préventive de flotte
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Planification des entretiens,
-              rappels automatiques et
-              réduction des coûts de maintenance.
+              Planifiez les entretiens, suivez les échéances et utilisez des
+              rappels automatiques pour réduire les immobilisations et mieux
+              maîtriser les coûts de maintenance de vos véhicules.
             </p>
+          </article>
 
-          </div>
-
-          <div className="
-            bg-white/90
-            backdrop-blur-md
-            p-8
-            rounded-3xl
-            shadow-lg
-            border
-            border-gray-100
-            hover:shadow-2xl
-            hover:-translate-y-2
-            transition
-            duration-300
-            ">
-
-            <div className="text-6xl mb-5">
+          {/* SUPPORT */}
+          <article
+            className="
+              bg-white/90
+              backdrop-blur-md
+              p-8
+              rounded-3xl
+              shadow-lg
+              border
+              border-gray-100
+              hover:shadow-2xl
+              hover:-translate-y-2
+              transition
+              duration-300
+            "
+          >
+            <div
+              className="text-6xl mb-5"
+              aria-hidden="true"
+            >
               📞
             </div>
 
             <h3 className="text-2xl font-bold mb-4">
-              Assistance 24h/24
+              Installation et assistance GPS
             </h3>
 
             <p className="text-gray-600 leading-7">
-              Une équipe technique vous accompagne
-              avant, pendant et après l'installation
-              de vos équipements GPS.
+              Notre équipe technique vous accompagne avant, pendant et après
+              l’installation de vos équipements GPS, avec un support adapté
+              aux besoins de votre activité à Kinshasa et en RDC.
             </p>
-
-          </div>
-
+          </article>
         </div>
 
-      </div>
+        {/* BLOC TEXTE SEO COMPLÉMENTAIRE */}
+        <div className="mt-20 max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Une solution GPS adaptée à chaque activité
+          </h2>
 
+          <p className="text-lg text-gray-700 leading-8">
+            Que vous gériez une flotte de véhicules commerciaux, des véhicules
+            de service, des engins, des camions ou des voitures particulières,
+            HESABU propose des solutions de suivi GPS et de télématique
+            adaptées aux réalités opérationnelles de Kinshasa et de la
+            République Démocratique du Congo.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
