@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /login
-Disallow: /dashboard
-Disallow: /client
-
 Sitemap: https://hesabudrc.com/sitemap.xml
