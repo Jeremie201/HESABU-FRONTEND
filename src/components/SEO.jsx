@@ -1,11 +1,17 @@
 import { Helmet } from "react-helmet-async";
 
 export default function SEO({
-  title,
-  description,
-  keywords,
+  title = "HESABU SARLU | GPS, Gestion de flotte et IoT en RDC",
+
+  description =
+    "HESABU SARLU est une entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT en République Démocratique du Congo.",
+
+  keywords =
+    "GPS RDC, Géolocalisation, Gestion de flotte, IoT, Tracking véhicule, Télématique, HESABU, Kinshasa",
+
   image = "https://hesabudrc.com/hesabusend.png",
-  url = "https://hesabudrc.com",
+
+  url = "https://hesabudrc.com/",
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -13,11 +19,11 @@ export default function SEO({
 
     name: "HESABU SARLU",
 
-    url: "https://hesabudrc.com",
+    url: "https://hesabudrc.com/",
 
     logo: "https://hesabudrc.com/favicon.png",
 
-    image: "https://hesabudrc.com/hesabusend.png",
+    image,
 
     description:
       "Entreprise congolaise spécialisée dans les solutions GPS, la gestion intelligente de flotte, la télématique embarquée et les technologies IoT.",
@@ -28,9 +34,12 @@ export default function SEO({
 
     address: {
       "@type": "PostalAddress",
+
       streetAddress:
         "11A3 Avenue Golf, Anciennes Galeries Présidentielles",
+
       addressLocality: "Kinshasa-Gombe",
+
       addressCountry: "CD",
     },
 
@@ -39,25 +48,30 @@ export default function SEO({
       name: "République Démocratique du Congo",
     },
 
-    foundingLocation: {
-      "@type": "Place",
-      name: "Kinshasa",
-    },
-
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+243839573532",
-      contactType: "customer service",
-      areaServed: "CD",
-      availableLanguage: ["French", "English"],
-    },
 
-    sameAs: [],
+      telephone: "+243839573532",
+
+      contactType: "customer service",
+
+      areaServed: "CD",
+
+      availableLanguage: [
+        "French",
+        "English",
+      ],
+    },
   };
 
   return (
     <Helmet>
-      {/* SEO principal */}
+
+      {/* ================================ */}
+      {/* SEO */}
+      {/* ================================ */}
+
+      <html lang="fr" />
 
       <title>{title}</title>
 
@@ -96,7 +110,10 @@ export default function SEO({
         href={url}
       />
 
-      {/* Open Graph - Facebook / WhatsApp / LinkedIn */}
+      {/* ================================ */}
+      {/* OPEN GRAPH */}
+      {/* Facebook / WhatsApp / LinkedIn */}
+      {/* ================================ */}
 
       <meta
         property="og:type"
@@ -130,7 +147,7 @@ export default function SEO({
 
       <meta
         property="og:image:alt"
-        content="HESABU SARLU - Solutions GPS et Gestion de Flotte"
+        content="HESABU SARLU - Solutions GPS et gestion de flotte"
       />
 
       <meta
@@ -148,7 +165,9 @@ export default function SEO({
         content="fr_CD"
       />
 
-      {/* Twitter / X */}
+      {/* ================================ */}
+      {/* TWITTER / X */}
+      {/* ================================ */}
 
       <meta
         name="twitter:card"
@@ -175,11 +194,14 @@ export default function SEO({
         content="HESABU SARLU"
       />
 
-      {/* Schema.org */}
+      {/* ================================ */}
+      {/* SCHEMA.ORG */}
+      {/* ================================ */}
 
       <script type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
+
     </Helmet>
   );
 }
