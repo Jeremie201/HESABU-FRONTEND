@@ -28,15 +28,15 @@ function WhyChooseUs() {
             id="why-hesabu-title"
             className="text-4xl md:text-5xl font-bold mt-4 mb-6"
           >
-            Une gestion de flotte GPS plus intelligente en RDC
+            Une gestion de flotte GPS plus intelligente à Kinshasa et en RDC
           </h2>
 
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-8">
-            Les solutions GPS, télématiques et IoT de HESABU permettent
-            aux entreprises en République Démocratique du Congo de suivre
-            leurs véhicules en temps réel, réduire leurs coûts
-            d’exploitation, améliorer la productivité et renforcer
-            la sécurité de leur flotte automobile.
+            Les solutions GPS, télématiques et IoT de HESABU permettent aux
+            entreprises de Kinshasa et de toute la République Démocratique du Congo
+            de suivre leurs véhicules en temps réel, réduire leurs coûts
+            d’exploitation, améliorer leur productivité et renforcer la sécurité
+            de leur flotte automobile.
           </p>
 
         </div>
