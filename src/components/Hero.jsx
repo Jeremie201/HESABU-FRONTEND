@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import affiche from "../assets/affiche.png";
+import affiche from "../assets/affiche.webp";
 
 function Hero() {
   return (
