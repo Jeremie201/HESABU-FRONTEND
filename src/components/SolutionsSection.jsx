@@ -1,4 +1,4 @@
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 function SolutionsSection() {
   return (
