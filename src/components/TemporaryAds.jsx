@@ -10,16 +10,15 @@ import { useEffect, useState } from "react";
 const CAMPAIGN_START = new Date("2026-08-19T00:00:00");
 const CAMPAIGN_END = new Date("2026-10-10T23:59:59");
 
-const AUTO_SLIDE_TIME = 8000;
-
 const ads = [
   {
     id: 6,
     image: rentreeImage,
     label: "SPÉCIALE RENTRÉE SCOLAIRE 2026-2027",
-    title: "La sécurité de vos déplacements et de ceux de vos enfants, notre priorité.",
+    title:
+      "La sécurité de vos déplacements et de ceux de vos enfants, notre priorité.",
     description:
-      "Ne vous contentez plus d’attendre leur arrivée ou leur arrivée.  Avec HESABU, suivez en temps réel les déplacements de vos enfants et de vos véhicules, où que vous soyez.",
+      "Ne vous contentez plus d’attendre leur arrivée ou leur arrivée. Avec HESABU, suivez en temps réel les déplacements de vos enfants et de vos véhicules, où que vous soyez.",
     button: "Sécuriser mes trajets",
     link: "/devis",
     featured: true,
@@ -34,7 +33,6 @@ const ads = [
     button: "Profiter de l'offre",
     link: "/contact",
   },
-
   {
     id: 2,
     image: carburantImage,
@@ -45,7 +43,6 @@ const ads = [
     button: "Réduire mes coûts",
     link: "/contact",
   },
-
   {
     id: 3,
     image: flotteImage,
@@ -56,7 +53,6 @@ const ads = [
     button: "Optimiser ma flotte",
     link: "/contact",
   },
-
   {
     id: 4,
     image: securiteImage,
@@ -67,12 +63,12 @@ const ads = [
     button: "Protéger mon véhicule",
     link: "/contact",
   },
-
   {
     id: 5,
     image: gpsImage,
     label: "GPS EN TEMPS RÉEL",
-    title: "Vous ne pouvez pas être partout. Avec HESABU, vous le pouvez.",
+    title:
+      "Vous ne pouvez pas être partout. Avec HESABU, vous le pouvez.",
     description:
       "Gardez un œil sur vos véhicules et leurs déplacements grâce à notre plateforme de géolocalisation.",
     button: "Voir la solution GPS",
@@ -118,21 +114,21 @@ function isCampaignActive() {
 
 export default function TemporaryAds() {
   const [currentAd, setCurrentAd] = useState(0);
+
   const [remaining, setRemaining] = useState(
     getRemainingTime()
   );
 
   const [visible, setVisible] = useState(() => {
-    const dismissed = sessionStorage.getItem("hesabu_ad_dismissed");
-  
-    return isCampaignActive() && dismissed !== "true";
+    const dismissed =
+      sessionStorage.getItem("hesabu_ad_dismissed");
+
+    return (
+      isCampaignActive() &&
+      dismissed !== "true"
+    );
   });
 
-  const [isPaused, setIsPaused] = useState(false);
-
-  /*
-   * Vérification de la campagne
-   */
   useEffect(() => {
     const checkCampaign = () => {
       if (!isCampaignActive()) {
@@ -150,31 +146,6 @@ export default function TemporaryAds() {
     return () => clearInterval(interval);
   }, []);
 
-  /*
-   * Rotation automatique des publicités
-   */
-  useEffect(() => {
-    if (!visible || isPaused) {
-      return;
-    }
-
-    const interval = setInterval(() => {
-      setCurrentAd(
-        (previous) =>
-          (previous + 1) % ads.length
-      );
-    }, AUTO_SLIDE_TIME);
-
-    return () => clearInterval(interval);
-  }, [
-    visible,
-    isPaused,
-    currentAd,
-  ]);
-
-  /*
-   * Compte à rebours
-   */
   useEffect(() => {
     if (!visible) {
       return;
@@ -195,9 +166,6 @@ export default function TemporaryAds() {
     return () => clearInterval(interval);
   }, [visible]);
 
-  /*
-   * Publicité précédente
-   */
   const previousAd = () => {
     setCurrentAd(
       (previous) =>
@@ -206,9 +174,6 @@ export default function TemporaryAds() {
     );
   };
 
-  /*
-   * Publicité suivante
-   */
   const nextAd = () => {
     setCurrentAd(
       (previous) =>
@@ -216,33 +181,30 @@ export default function TemporaryAds() {
     );
   };
 
-  /*
-   * Sélection directe
-   */
   const selectAd = (index) => {
     setCurrentAd(index);
   };
 
-  /*
-   * Fermer la publicité
-   */
   const closeAd = () => {
-    sessionStorage.setItem("hesabu_ad_dismissed", "true");
-  
+    sessionStorage.setItem(
+      "hesabu_ad_dismissed",
+      "true"
+    );
+
     setVisible(false);
   };
 
   const handleAdClick = (link) => {
-    sessionStorage.setItem("hesabu_ad_dismissed", "true");
-  
+    sessionStorage.setItem(
+      "hesabu_ad_dismissed",
+      "true"
+    );
+
     setVisible(false);
-  
+
     window.location.href = link;
   };
 
-  /*
-   * Ne rien afficher si la campagne est inactive
-   */
   if (!visible || !remaining) {
     return null;
   }
@@ -262,185 +224,413 @@ export default function TemporaryAds() {
         max-h-[calc(100vh-2rem)]
         overflow-y-auto
       "
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
 
-      {/* ==================================================
-          CARTE PUBLICITAIRE
-      ================================================== */}
-
-      <div className="relative overflow-hidden rounded-2xl border border-white/30 bg-[#E30613] shadow-[0_0_35px_rgba(255,255,255,0.75)]">
-
-        {/* ==================================================
-            BADGE "À LA UNE HESABU"
-        ================================================== */}
+      <div
+        className="
+          relative
+          overflow-hidden
+          rounded-2xl
+          border
+          border-white/30
+          bg-[#E30613]
+          shadow-[0_0_35px_rgba(255,255,255,0.75)]
+        "
+      >
 
         <div className="absolute left-5 top-4 z-30">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-1.5 backdrop-blur-sm">
 
-            <span className="text-xs text-white">
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-white/20
+              bg-white/15
+              px-3
+              py-1.5
+              backdrop-blur-sm
+            "
+          >
+
+            <span
+              className="text-xs text-white"
+              aria-hidden="true"
+            >
               ✦
             </span>
 
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">
+            <span
+              className="
+                text-[10px]
+                font-extrabold
+                uppercase
+                tracking-[0.18em]
+                text-white
+              "
+            >
               HESABU VOUS INFORME
             </span>
 
           </div>
+
         </div>
 
-        {/* ==================================================
-            BOUTON FERMER
-        ================================================== */}
-
         <button
+          type="button"
           onClick={closeAd}
           aria-label="Fermer la publicité"
-          className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-xl text-white transition hover:bg-white hover:text-[#E30613]"
+          className="
+            absolute
+            right-4
+            top-4
+            z-30
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-full
+            bg-white/15
+            text-xl
+            text-white
+            transition
+            hover:bg-white
+            hover:text-[#E30613]
+            focus:outline-none
+            focus:ring-2
+            focus:ring-white
+          "
         >
-          ×
+          <span aria-hidden="true">
+            ×
+          </span>
         </button>
-
-        {/* ==================================================
-            CONTENU DE LA PUBLICITÉ
-        ================================================== */}
 
         <div
           key={ad.id}
-          className={`animate-ad-enter gap-5 p-5 pb-12 pt-16 sm:gap-6 sm:p-6 sm:pb-12 sm:pt-16 md:gap-7 md:p-8 md:pb-12 md:pt-16 ${
-            ad.featured
-              ? "flex flex-col"
-              : "flex flex-col sm:flex-row sm:items-center"
-          }`}
+          className={`
+            animate-ad-enter
+            gap-5
+            p-5
+            pb-12
+            pt-16
+            sm:gap-6
+            sm:p-6
+            sm:pb-12
+            sm:pt-16
+            md:gap-7
+            md:p-8
+            md:pb-12
+            md:pt-16
+            ${
+              ad.featured
+                ? "flex flex-col"
+                : "flex flex-col sm:flex-row sm:items-center"
+            }
+          `}
         >
-
-          {/* ==================================================
-              IMAGE
-          ================================================== */}
 
           {ad.featured ? (
             <div className="w-full flex justify-center">
+
               <img
                 src={ad.image}
                 alt={ad.title}
-                className="w-full max-w-5xl max-h-[360px] object-contain rounded-2xl"
+                decoding="async"
+                className="
+                  w-full
+                  max-w-5xl
+                  max-h-[360px]
+                  object-contain
+                  rounded-2xl
+                "
               />
+
             </div>
           ) : (
-            <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-white p-2 shadow-lg sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
+            <div
+              className="
+                h-24
+                w-24
+                shrink-0
+                overflow-hidden
+                rounded-2xl
+                bg-white
+                p-2
+                shadow-lg
+                sm:h-28
+                sm:w-28
+                md:h-32
+                md:w-32
+                lg:h-36
+                lg:w-36
+              "
+            >
+
               <img
                 src={ad.image}
                 alt={ad.title}
+                decoding="async"
                 className="h-full w-full object-contain"
               />
+
             </div>
           )}
-          {/* ==================================================
-              CONTENU TEXTE
-          ================================================== */}
 
           <div className="min-w-0 flex-1 pr-8 text-white">
 
-            {/* Label de la publicité */}
             <div className="mb-2 flex items-center gap-2">
 
-              <span className="text-xs font-bold tracking-[0.2em] text-white/80">
+              <span
+                className="
+                  text-xs
+                  font-bold
+                  tracking-[0.2em]
+                  text-white/90
+                "
+              >
                 {ad.label}
               </span>
 
             </div>
 
-            {/* Titre */}
-            <h2 className="text-xl font-extrabold leading-tight sm:text-2xl md:text-3xl">
+            <h2
+              className="
+                text-xl
+                font-extrabold
+                leading-tight
+                sm:text-2xl
+                md:text-3xl
+              "
+            >
               {ad.title}
             </h2>
 
-            {/* Description */}
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-white/90 md:text-base">
+            <p
+              className="
+                mt-2
+                max-w-2xl
+                text-sm
+                leading-6
+                text-white/95
+                md:text-base
+              "
+            >
               {ad.description}
             </p>
 
-            {/* ==================================================
-                COMPTE À REBOURS
-            ================================================== */}
-
             {ad.id === 1 && (
               <div className="mt-4">
-            
-                {/* Libellé */}
+
                 <div className="mb-2">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-white/80">
+
+                  <span
+                    className="
+                      text-xs
+                      font-semibold
+                      uppercase
+                      tracking-wide
+                      text-white/90
+                    "
+                  >
                     Offre valable encore :
                   </span>
+
                 </div>
-            
-                {/* Compte à rebours */}
+
                 <div className="flex items-center gap-1.5 sm:gap-2">
-            
-                  {/* Jours */}
-                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+
+                  <div
+                    className="
+                      flex
+                      h-10
+                      min-w-[42px]
+                      items-center
+                      justify-center
+                      rounded-lg
+                      bg-white
+                      px-2
+                      text-center
+                      text-[#E30613]
+                      shadow-sm
+                      sm:h-11
+                      sm:min-w-[48px]
+                    "
+                  >
                     <strong className="text-sm sm:text-base">
                       {remaining.days}
                     </strong>
-            
-                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+
+                    <span
+                      className="
+                        ml-1
+                        text-[10px]
+                        font-semibold
+                        sm:text-xs
+                      "
+                    >
                       j
                     </span>
                   </div>
-            
-                  {/* Heures */}
-                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+
+                  <div
+                    className="
+                      flex
+                      h-10
+                      min-w-[42px]
+                      items-center
+                      justify-center
+                      rounded-lg
+                      bg-white
+                      px-2
+                      text-center
+                      text-[#E30613]
+                      shadow-sm
+                      sm:h-11
+                      sm:min-w-[48px]
+                    "
+                  >
                     <strong className="text-sm sm:text-base">
-                      {String(remaining.hours).padStart(2, "0")}
+                      {String(
+                        remaining.hours
+                      ).padStart(2, "0")}
                     </strong>
-            
-                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+
+                    <span
+                      className="
+                        ml-1
+                        text-[10px]
+                        font-semibold
+                        sm:text-xs
+                      "
+                    >
                       h
                     </span>
                   </div>
-            
-                  {/* Minutes */}
-                  <div className="flex h-10 min-w-[48px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[55px]">
+
+                  <div
+                    className="
+                      flex
+                      h-10
+                      min-w-[48px]
+                      items-center
+                      justify-center
+                      rounded-lg
+                      bg-white
+                      px-2
+                      text-center
+                      text-[#E30613]
+                      shadow-sm
+                      sm:h-11
+                      sm:min-w-[55px]
+                    "
+                  >
                     <strong className="text-sm sm:text-base">
-                      {String(remaining.minutes).padStart(2, "0")}
+                      {String(
+                        remaining.minutes
+                      ).padStart(2, "0")}
                     </strong>
-            
-                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+
+                    <span
+                      className="
+                        ml-1
+                        text-[10px]
+                        font-semibold
+                        sm:text-xs
+                      "
+                    >
                       min
                     </span>
                   </div>
-            
-                  {/* Secondes */}
-                  <div className="flex h-10 min-w-[42px] items-center justify-center rounded-lg bg-white px-2 text-center text-[#E30613] shadow-sm sm:h-11 sm:min-w-[48px]">
+
+                  <div
+                    className="
+                      flex
+                      h-10
+                      min-w-[42px]
+                      items-center
+                      justify-center
+                      rounded-lg
+                      bg-white
+                      px-2
+                      text-center
+                      text-[#E30613]
+                      shadow-sm
+                      sm:h-11
+                      sm:min-w-[48px]
+                    "
+                  >
                     <strong className="text-sm sm:text-base">
-                      {String(remaining.seconds).padStart(2, "0")}
+                      {String(
+                        remaining.seconds
+                      ).padStart(2, "0")}
                     </strong>
-            
-                    <span className="ml-1 text-[10px] font-semibold sm:text-xs">
+
+                    <span
+                      className="
+                        ml-1
+                        text-[10px]
+                        font-semibold
+                        sm:text-xs
+                      "
+                    >
                       s
                     </span>
                   </div>
-            
+
                 </div>
-            
+
               </div>
             )}
+
           </div>
 
-       {/* ==================================================
-              CTA
-          ================================================== */}
-          
-        <div className="shrink-0">
+          <div className="shrink-0">
 
             <button
-              onClick={() => handleAdClick(ad.link)}
-              className="group inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-[#E30613] shadow-lg transition-all duration-200 hover:-translate-y-1 hover:bg-gray-50 hover:shadow-xl md:w-auto"
+              type="button"
+              onClick={() =>
+                handleAdClick(ad.link)
+              }
+              className="
+                group
+                inline-flex
+                w-full
+                items-center
+                justify-center
+                rounded-xl
+                bg-white
+                px-6
+                py-3.5
+                text-sm
+                font-extrabold
+                text-[#E30613]
+                shadow-lg
+                transition-all
+                duration-200
+                hover:-translate-y-1
+                hover:bg-gray-50
+                hover:shadow-xl
+                focus:outline-none
+                focus:ring-2
+                focus:ring-white
+                md:w-auto
+              "
             >
               {ad.button}
 
-              <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
+              <span
+                className="
+                  ml-2
+                  transition-transform
+                  duration-200
+                  group-hover:translate-x-1
+                "
+                aria-hidden="true"
+              >
                 →
               </span>
             </button>
@@ -448,93 +638,118 @@ export default function TemporaryAds() {
           </div>
 
         </div>
-        {/* ==================================================
-            NAVIGATION
-        ================================================== */}
 
-        <div className="absolute bottom-2 left-1/2 z-30 flex -translate-x-1/2 items-center gap-3">
+        <div
+          className="
+            absolute
+            bottom-2
+            left-1/2
+            z-30
+            flex
+            -translate-x-1/2
+            items-center
+            gap-3
+          "
+        >
 
-          {/* Précédent */}
           <button
+            type="button"
             onClick={previousAd}
             aria-label="Publicité précédente"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white transition hover:bg-white hover:text-[#E30613]"
+            className="
+              flex
+              h-7
+              w-7
+              items-center
+              justify-center
+              rounded-full
+              bg-white/20
+              text-sm
+              font-bold
+              text-white
+              transition
+              hover:bg-white
+              hover:text-[#E30613]
+              focus:outline-none
+              focus:ring-2
+              focus:ring-white
+            "
           >
-            ←
+            <span aria-hidden="true">
+              ←
+            </span>
           </button>
 
-          {/* Indicateurs */}
           <div className="flex items-center gap-1.5">
 
             {ads.map((item, index) => (
               <button
                 key={item.id}
+                type="button"
                 onClick={() =>
                   selectAd(index)
                 }
-                aria-label={`Afficher la publicité ${index + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  index === currentAd
-                    ? "w-6 bg-white"
-                    : "w-1.5 bg-white/40"
+                aria-label={`Afficher la publicité ${
+                  index + 1
                 }`}
+                aria-current={
+                  index === currentAd
+                    ? "true"
+                    : undefined
+                }
+                className={`
+                  h-1.5
+                  rounded-full
+                  transition-all
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-white
+                  ${
+                    index === currentAd
+                      ? "w-6 bg-white"
+                      : "w-1.5 bg-white/40"
+                  }
+                `}
               />
             ))}
 
           </div>
 
-          {/* Suivant */}
           <button
+            type="button"
             onClick={nextAd}
             aria-label="Publicité suivante"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white transition hover:bg-white hover:text-[#E30613]"
+            className="
+              flex
+              h-7
+              w-7
+              items-center
+              justify-center
+              rounded-full
+              bg-white/20
+              text-sm
+              font-bold
+              text-white
+              transition
+              hover:bg-white
+              hover:text-[#E30613]
+              focus:outline-none
+              focus:ring-2
+              focus:ring-white
+            "
           >
-            →
+            <span aria-hidden="true">
+              →
+            </span>
           </button>
 
         </div>
 
-        {/* ==================================================
-            BARRE DE PROGRESSION
-        ================================================== */}
-
-        {!isPaused && (
-          <div className="absolute bottom-0 left-0 h-1 w-full bg-white/20">
-
-            <div
-              key={currentAd}
-              className="h-full bg-white"
-              style={{
-                animation: `adProgress ${AUTO_SLIDE_TIME}ms linear`,
-              }}
-            />
-
-          </div>
-        )}
-
       </div>
-
-      {/* ==================================================
-          ANIMATIONS
-      ================================================== */}
 
       <style>
         {`
-
-          @keyframes adProgress {
-
-            from {
-              width: 0%;
-            }
-
-            to {
-              width: 100%;
-            }
-
-          }
-
           @keyframes adEnter {
-
             from {
               opacity: 0;
               transform: translateX(25px);
@@ -544,13 +759,11 @@ export default function TemporaryAds() {
               opacity: 1;
               transform: translateX(0);
             }
-
           }
 
           .animate-ad-enter {
             animation: adEnter 0.45s ease-out both;
           }
-
         `}
       </style>
 
