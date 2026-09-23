@@ -20,242 +20,242 @@ function Services() {
 
       <Navbar />
 
-      {/* ================================= */}
-      {/* HERO SERVICES */}
-      {/* ================================= */}
+      <main>
 
-      <section
-        className="
-          bg-gradient-to-br
-          from-red-700
-          via-red-600
-          to-black
-          text-white
-          py-16
-          md:py-24
-        "
-        aria-labelledby="services-title"
-      >
-        <div
+        {/* HERO SERVICES */}
+
+        <section
           className="
-            relative
-            z-10
-            max-w-7xl
-            mx-auto
-            px-6
-            md:px-8
-            text-center
+            bg-gradient-to-br
+            from-red-700
+            via-red-600
+            to-black
+            text-white
+            py-16
+            md:py-24
           "
+          aria-labelledby="services-title"
         >
-          <span className="uppercase tracking-[5px] text-red-200 font-semibold">
-            HESABU SERVICES
-          </span>
-
-          <h1
-            id="services-title"
-            className="
-              text-4xl
-              sm:text-5xl
-              lg:text-7xl
-              font-extrabold
-              mt-4
-              mb-6
-              leading-tight
-            "
-          >
-            Services GPS
-            <br />
-            et Géolocalisation
-            <br />
-            à Kinshasa et en RDC
-          </h1>
-
-          <p
-            className="
-              text-xl
-              text-red-100
-              max-w-4xl
-              mx-auto
-              leading-8
-            "
-          >
-            HESABU SARLU propose des services professionnels de
-            géolocalisation GPS, de suivi de véhicules, de gestion de flotte,
-            de télématique embarquée et de sécurité automobile à Kinshasa
-            et partout en République Démocratique du Congo.
-          </p>
-
-          <p
-            className="
-              text-lg
-              text-red-100
-              max-w-4xl
-              mx-auto
-              leading-8
-              mt-5
-            "
-          >
-            Nos solutions permettent aux entreprises, institutions,
-            transporteurs et particuliers de suivre leurs véhicules en temps
-            réel, mieux contrôler leurs opérations, réduire les coûts
-            d'exploitation et renforcer la sécurité de leurs actifs.
-          </p>
-
-          {/* INDICATEURS */}
           <div
             className="
-              grid
-              grid-cols-2
-              md:grid-cols-4
-              gap-6
-              md:gap-8
-              mt-12
-              md:mt-16
+              relative
+              z-10
+              max-w-7xl
+              mx-auto
+              px-6
+              md:px-8
+              text-center
             "
-            aria-label="Principales caractéristiques des services HESABU"
           >
-            <div>
-              <p
-                className="
-                  text-3xl
-                  sm:text-4xl
-                  lg:text-5xl
-                  font-bold
-                "
-              >
-                24/7
-              </p>
+            <span className="uppercase tracking-[5px] text-red-100 font-semibold">
+              HESABU SERVICES
+            </span>
 
-              <p className="mt-2 text-red-100">
-                Surveillance continue
-              </p>
-            </div>
+            <h1
+              id="services-title"
+              className="
+                text-4xl
+                sm:text-5xl
+                lg:text-7xl
+                font-extrabold
+                mt-4
+                mb-6
+                leading-tight
+              "
+            >
+              Services GPS
+              <br />
+              et Géolocalisation
+              <br />
+              à Kinshasa et en RDC
+            </h1>
 
-            <div>
-              <p
-                className="
-                  text-3xl
-                  sm:text-4xl
-                  lg:text-5xl
-                  font-bold
-                "
-              >
-                GPS
-              </p>
+            <p
+              className="
+                text-xl
+                text-red-100
+                max-w-4xl
+                mx-auto
+                leading-8
+              "
+            >
+              HESABU SARLU propose des services professionnels de
+              géolocalisation GPS, de suivi de véhicules, de gestion de flotte,
+              de télématique embarquée et de sécurité automobile à Kinshasa
+              et partout en République Démocratique du Congo.
+            </p>
 
-              <p className="mt-2 text-red-100">
-                Suivi en temps réel
-              </p>
-            </div>
+            <p
+              className="
+                text-lg
+                text-red-100
+                max-w-4xl
+                mx-auto
+                leading-8
+                mt-5
+              "
+            >
+              Nos solutions permettent aux entreprises, institutions,
+              transporteurs et particuliers de suivre leurs véhicules en temps
+              réel, mieux contrôler leurs opérations, réduire les coûts
+              d'exploitation et renforcer la sécurité de leurs actifs.
+            </p>
 
-            <div>
-              <p
-                className="
-                  text-3xl
-                  sm:text-4xl
-                  lg:text-5xl
-                  font-bold
-                "
-              >
-                IoT
-              </p>
+            <div
+              className="
+                grid
+                grid-cols-2
+                md:grid-cols-4
+                gap-6
+                md:gap-8
+                mt-12
+                md:mt-16
+              "
+              aria-label="Principales caractéristiques des services HESABU"
+            >
+              <div>
+                <p
+                  className="
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
+                    font-bold
+                  "
+                >
+                  24/7
+                </p>
 
-              <p className="mt-2 text-red-100">
-                Véhicules connectés
-              </p>
-            </div>
+                <p className="mt-2 text-red-100">
+                  Surveillance continue
+                </p>
+              </div>
 
-            <div>
-              <p
-                className="
-                  text-3xl
-                  sm:text-4xl
-                  lg:text-5xl
-                  font-bold
-                "
-                aria-hidden="true"
-              >
-                📈
-              </p>
+              <div>
+                <p
+                  className="
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
+                    font-bold
+                  "
+                >
+                  GPS
+                </p>
 
-              <p className="mt-2 text-red-100">
-                Performance de flotte
-              </p>
+                <p className="mt-2 text-red-100">
+                  Suivi en temps réel
+                </p>
+              </div>
+
+              <div>
+                <p
+                  className="
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
+                    font-bold
+                  "
+                >
+                  IoT
+                </p>
+
+                <p className="mt-2 text-red-100">
+                  Véhicules connectés
+                </p>
+              </div>
+
+              <div>
+                <p
+                  className="
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
+                    font-bold
+                  "
+                  aria-hidden="true"
+                >
+                  📈
+                </p>
+
+                <p className="mt-2 text-red-100">
+                  Performance de flotte
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ================================= */}
-      {/* LISTE DES SERVICES */}
-      {/* ================================= */}
+        {/* LISTE DES SERVICES */}
 
-      <ServicesSection />
+        <ServicesSection />
 
-      {/* ================================= */}
-      {/* CTA */}
-      {/* ================================= */}
+        {/* CTA */}
 
-      <section
-        className="relative py-24 overflow-hidden"
-        style={{
-          backgroundImage: `url(${mapBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        aria-labelledby="services-cta-title"
-      >
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+        <section
+          className="relative py-24 overflow-hidden"
+          style={{
+            backgroundImage: `url(${mapBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          aria-labelledby="services-cta-title"
+        >
+          <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 md:px-8">
+          <div className="relative z-10 max-w-5xl mx-auto text-center px-6 md:px-8">
 
-          <span className="text-red-600 uppercase font-bold tracking-[4px]">
-            Votre projet
-          </span>
+            <span className="text-red-700 uppercase font-bold tracking-[4px]">
+              Votre projet
+            </span>
 
-          <h2
-            id="services-cta-title"
-            className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 mb-6"
-          >
-            Besoin d'une solution GPS adaptée à votre flotte ?
-          </h2>
+            <h2
+              id="services-cta-title"
+              className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 mb-6"
+            >
+              Besoin d'une solution GPS adaptée à votre flotte ?
+            </h2>
 
-          <p className="text-lg md:text-xl text-gray-700 mb-4 leading-8">
-            Nos équipes vous accompagnent dans le choix d'une solution de
-            géolocalisation, de télématique et de gestion de flotte adaptée
-            à vos véhicules et à votre activité.
-          </p>
+            <p className="text-lg md:text-xl text-gray-700 mb-4 leading-8">
+              Nos équipes vous accompagnent dans le choix d'une solution de
+              géolocalisation, de télématique et de gestion de flotte adaptée
+              à vos véhicules et à votre activité.
+            </p>
 
-          <p className="text-lg text-gray-700 mb-10 leading-8">
-            Que votre activité soit basée à Kinshasa ou ailleurs en
-            République Démocratique du Congo, HESABU vous aide à mettre
-            en place une solution de suivi GPS adaptée à vos besoins.
-          </p>
+            <p className="text-lg text-gray-700 mb-10 leading-8">
+              Que votre activité soit basée à Kinshasa ou ailleurs en
+              République Démocratique du Congo, HESABU vous aide à mettre
+              en place une solution de suivi GPS adaptée à vos besoins.
+            </p>
 
-          <Link
-            to="/devis"
-            className="
-              inline-block
-              bg-red-600
-              text-white
-              px-10
-              py-4
-              rounded-xl
-              font-bold
-              text-lg
-              shadow-xl
-              hover:bg-red-700
-              hover:scale-105
-              transition
-              duration-300
-            "
-          >
-            Demander un devis GPS
-          </Link>
+            <Link
+              to="/devis"
+              className="
+                inline-block
+                bg-red-700
+                text-white
+                px-10
+                py-4
+                rounded-xl
+                font-bold
+                text-lg
+                shadow-xl
+                hover:bg-red-800
+                hover:scale-105
+                focus:outline-none
+                focus:ring-4
+                focus:ring-red-300
+                transition
+                duration-300
+              "
+            >
+              Demander un devis GPS
+            </Link>
 
-        </div>
-      </section>
+          </div>
+        </section>
+
+      </main>
 
       <Footer />
     </>
