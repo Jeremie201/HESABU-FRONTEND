@@ -5,7 +5,7 @@ import ServicesSection from "../components/ServicesSection";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 function Services() {
   return (
