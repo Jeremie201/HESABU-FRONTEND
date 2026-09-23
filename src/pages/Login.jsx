@@ -20,10 +20,20 @@ function Login() {
         noIndex
       />
 
-      <main className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
+      <main
+        className="
+          min-h-screen
+          flex
+          items-center
+          justify-center
+          bg-gray-100
+          px-6
+        "
+      >
 
         <form
           onSubmit={submit}
+          aria-labelledby="login-title"
           className="
             bg-white
             p-8
@@ -36,15 +46,18 @@ function Login() {
         >
           <div className="text-center mb-8">
 
-            <span className="text-red-600 uppercase font-bold tracking-[4px]">
+            <span className="text-red-700 uppercase font-bold tracking-[4px]">
               HESABU SARLU
             </span>
 
-            <h1 className="text-4xl font-bold mt-4 mb-3 text-gray-900">
+            <h1
+              id="login-title"
+              className="text-4xl font-bold mt-4 mb-3 text-gray-900"
+            >
               Connexion
             </h1>
 
-            <p className="text-gray-600">
+            <p className="text-gray-700">
               Accédez à votre espace sécurisé HESABU.
             </p>
 
@@ -68,12 +81,15 @@ function Login() {
               className="
                 w-full
                 border
-                border-gray-300
+                border-gray-400
                 p-4
                 rounded-xl
+                text-gray-900
+                placeholder:text-gray-500
                 focus:outline-none
-                focus:ring-2
-                focus:ring-red-500
+                focus:ring-4
+                focus:ring-red-300
+                focus:border-red-700
               "
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -101,12 +117,15 @@ function Login() {
               className="
                 w-full
                 border
-                border-gray-300
+                border-gray-400
                 p-4
                 rounded-xl
+                text-gray-900
+                placeholder:text-gray-500
                 focus:outline-none
-                focus:ring-2
-                focus:ring-red-500
+                focus:ring-4
+                focus:ring-red-300
+                focus:border-red-700
               "
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -120,12 +139,15 @@ function Login() {
             type="submit"
             className="
               w-full
-              bg-red-600
-              hover:bg-red-700
+              bg-red-700
+              hover:bg-red-800
               text-white
               py-4
               rounded-xl
               font-bold
+              focus:outline-none
+              focus:ring-4
+              focus:ring-red-300
               transition
               duration-300
             "
