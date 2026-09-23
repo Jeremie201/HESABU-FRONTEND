@@ -3,7 +3,7 @@ import carburantImage from "../assets/ads/carburant.jpg";
 import flotteImage from "../assets/ads/flotte.jpg";
 import securiteImage from "../assets/ads/securite.jpg";
 import gpsImage from "../assets/ads/gps.jpg";
-import rentreeImage from "../assets/ads/rentree-scolaire.jpg";
+import rentreeImage from "../assets/ads/rentree-scolaire.webp";
 
 import { useEffect, useState } from "react";
 
