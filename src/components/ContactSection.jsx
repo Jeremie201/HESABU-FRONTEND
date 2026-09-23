@@ -206,9 +206,9 @@ function ContactSection() {
               </h2>
 
               <address className="not-italic text-gray-700 leading-7">
-                11A3 Avenue Golf
+                Boulevard du 30 Juin
                 <br />
-                Anciennes Galeries Présidentielles
+                Anciennes Galeries Présidentielles, 11A3
                 <br />
                 Kinshasa-Gombe
                 <br />
