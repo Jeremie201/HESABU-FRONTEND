@@ -11,7 +11,6 @@ ReactDOM.createRoot(
 ).render(
   <React.StrictMode>
     <HelmetProvider>
-
       <Toaster
         position="top-right"
         toastOptions={{
@@ -20,7 +19,6 @@ ReactDOM.createRoot(
       />
 
       <App />
-
     </HelmetProvider>
   </React.StrictMode>
 );
