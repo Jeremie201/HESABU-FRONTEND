@@ -27,7 +27,8 @@ function ServicesSection() {
       >
         {/* TITRE */}
         <div className="text-center mb-16">
-          <span className="text-red-600 font-bold uppercase tracking-[4px]">
+
+          <span className="text-red-700 font-bold uppercase tracking-[4px]">
             Nos expertises
           </span>
 
@@ -62,6 +63,7 @@ function ServicesSection() {
             géolocalisation GPS, de gestion de flotte, de sécurité automobile,
             de suivi carburant et de télématique connectée.
           </p>
+
         </div>
 
         {/* CARTES */}
@@ -74,6 +76,7 @@ function ServicesSection() {
             gap-8
           "
         >
+
           {/* GÉOLOCALISATION GPS */}
           <article
             className="
@@ -97,11 +100,11 @@ function ServicesSection() {
               📍
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Géolocalisation GPS des véhicules
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Suivez vos véhicules en temps réel à Kinshasa et en RDC,
               consultez leur historique de déplacement, visualisez leurs
               positions et améliorez l’organisation de vos trajets.
@@ -131,11 +134,11 @@ function ServicesSection() {
               🔒
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Sécurité anti-vol et protection automobile
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Renforcez la sécurité de vos véhicules grâce à la localisation
               instantanée, aux alertes intelligentes, au suivi des mouvements
               et aux fonctions de protection adaptées à votre installation.
@@ -165,11 +168,11 @@ function ServicesSection() {
               🚚
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Gestion intelligente de flotte
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Analysez les trajets, les temps d’arrêt, l’utilisation des
               véhicules et les performances de votre flotte afin de mieux
               contrôler les opérations et réduire les coûts d’exploitation.
@@ -199,11 +202,11 @@ function ServicesSection() {
               🔔
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Alertes GPS intelligentes
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Recevez des notifications sur les excès de vitesse, sorties de
               zone, démarrages, arrêts prolongés et autres événements utiles
               pour surveiller votre flotte en temps réel.
@@ -233,11 +236,11 @@ function ServicesSection() {
               🛠️
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Maintenance préventive de flotte
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Planifiez les entretiens, suivez les échéances et utilisez des
               rappels automatiques pour réduire les immobilisations et mieux
               maîtriser les coûts de maintenance de vos véhicules.
@@ -267,21 +270,29 @@ function ServicesSection() {
               📞
             </div>
 
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Installation et assistance GPS
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Notre équipe technique vous accompagne avant, pendant et après
               l’installation de vos équipements GPS, avec un support adapté
               aux besoins de votre activité à Kinshasa et en RDC.
             </p>
           </article>
+
         </div>
 
         {/* BLOC TEXTE SEO COMPLÉMENTAIRE */}
-        <div className="mt-20 max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div
+          className="mt-20 max-w-5xl mx-auto text-center"
+          aria-labelledby="services-activity-title"
+        >
+
+          <h2
+            id="services-activity-title"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          >
             Une solution GPS adaptée à chaque activité
           </h2>
 
@@ -292,8 +303,11 @@ function ServicesSection() {
             adaptées aux réalités opérationnelles de Kinshasa et de la
             République Démocratique du Congo.
           </p>
+
         </div>
+
       </div>
+
     </section>
   );
 }
