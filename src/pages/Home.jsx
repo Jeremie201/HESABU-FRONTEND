@@ -15,16 +15,14 @@ function Home() {
         url="https://hesabudrc.com/"
       />
 
-      {/* Navigation */}
       <Navbar />
 
-      {/* Hero */}
-      <Hero />
+      <main>
+        <Hero />
 
-      {/* Pourquoi choisir HESABU */}
-      <WhyChooseUs />
+        <WhyChooseUs />
+      </main>
 
-      {/* Pied de page */}
       <Footer />
     </>
   );
