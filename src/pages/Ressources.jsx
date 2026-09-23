@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 import articles from "../data/articles";
 
