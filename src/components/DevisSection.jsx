@@ -77,13 +77,11 @@ function DevisSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
 
-        {/* ================================= */}
         {/* TITRE PRINCIPAL */}
-        {/* ================================= */}
 
         <div className="text-center mb-14">
 
-          <span className="text-red-600 uppercase font-bold tracking-[4px]">
+          <span className="text-red-700 uppercase font-bold tracking-[4px]">
             HESABU SARLU
           </span>
 
@@ -117,9 +115,7 @@ function DevisSection() {
 
         </div>
 
-        {/* ================================= */}
         {/* AVANTAGES */}
-        {/* ================================= */}
 
         <div className="grid md:grid-cols-3 gap-6 mb-14">
 
@@ -142,11 +138,11 @@ function DevisSection() {
               📍
             </div>
 
-            <h2 className="text-xl font-bold mb-3">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">
               Solutions GPS adaptées
             </h2>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Une solution adaptée au type de véhicule,
               au nombre d’unités et aux besoins de votre activité.
             </p>
@@ -171,11 +167,11 @@ function DevisSection() {
               🚚
             </div>
 
-            <h2 className="text-xl font-bold mb-3">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">
               Gestion de flotte
             </h2>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Suivi des véhicules, géolocalisation,
               contrôle des opérations et données de flotte.
             </p>
@@ -200,11 +196,11 @@ function DevisSection() {
               📞
             </div>
 
-            <h2 className="text-xl font-bold mb-3">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">
               Accompagnement HESABU
             </h2>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-gray-700 leading-7">
               Notre équipe vous aide à identifier
               la solution adaptée à vos véhicules et à votre projet.
             </p>
@@ -212,19 +208,26 @@ function DevisSection() {
 
         </div>
 
-        {/* ================================= */}
         {/* FORMULAIRE */}
-        {/* ================================= */}
 
-        <div className="max-w-4xl mx-auto">
+        <div
+          className="max-w-4xl mx-auto"
+          aria-labelledby="devis-form-title"
+        >
 
           <div className="text-center mb-8">
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2
+              id="devis-form-title"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            >
               Parlez-nous de votre flotte
             </h2>
 
-            <p className="text-lg text-gray-700 leading-8">
+            <p
+              id="devis-form-description"
+              className="text-lg text-gray-700 leading-8"
+            >
               Remplissez le formulaire ci-dessous pour recevoir une
               proposition adaptée à vos besoins en GPS, géolocalisation,
               sécurité, carburant ou gestion de flotte.
@@ -234,6 +237,9 @@ function DevisSection() {
 
           <form
             onSubmit={envoyer}
+            aria-labelledby="devis-form-title"
+            aria-describedby="devis-form-description"
+            aria-busy={loading}
             className="
               bg-white/95
               backdrop-blur-md
@@ -267,12 +273,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               />
@@ -298,12 +307,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
               />
             </div>
@@ -325,13 +337,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
                   bg-white
+                  text-gray-900
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               >
@@ -397,12 +411,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               />
@@ -425,15 +442,19 @@ function DevisSection() {
                 value={form.telephone}
                 onChange={handleChange}
                 autoComplete="tel"
+                inputMode="tel"
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               />
@@ -456,13 +477,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
                   bg-white
+                  text-gray-900
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               >
@@ -529,15 +552,19 @@ function DevisSection() {
                 value={form.nombreVehicules}
                 onChange={handleChange}
                 min="1"
+                inputMode="numeric"
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               />
@@ -560,13 +587,15 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
                   bg-white
+                  text-gray-900
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
                 required
               >
@@ -615,24 +644,25 @@ function DevisSection() {
                 className="
                   w-full
                   border
-                  border-gray-300
+                  border-gray-400
                   rounded-xl
                   p-4
+                  text-gray-900
+                  placeholder:text-gray-500
                   resize-y
                   focus:outline-none
-                  focus:ring-2
-                  focus:ring-red-500
+                  focus:ring-4
+                  focus:ring-red-300
+                  focus:border-red-700
                 "
               />
             </div>
 
-            {/* ================================= */}
             {/* RÉCAPITULATIF */}
-            {/* ================================= */}
 
-            <div className="bg-gray-50 border rounded-2xl p-5">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
 
-              <h3 className="font-bold text-lg mb-4">
+              <h3 className="font-bold text-lg text-gray-900 mb-4">
                 Récapitulatif de votre demande
               </h3>
 
@@ -677,8 +707,8 @@ function DevisSection() {
               type="submit"
               disabled={loading}
               className="
-                bg-red-600
-                hover:bg-red-700
+                bg-red-700
+                hover:bg-red-800
                 transition
                 text-white
                 px-8
@@ -686,6 +716,9 @@ function DevisSection() {
                 rounded-xl
                 font-bold
                 w-full
+                focus:outline-none
+                focus:ring-4
+                focus:ring-red-300
                 disabled:opacity-50
                 disabled:cursor-not-allowed
               "
@@ -699,13 +732,17 @@ function DevisSection() {
 
         </div>
 
-        {/* ================================= */}
         {/* TEXTE LOCAL / SEO */}
-        {/* ================================= */}
 
-        <div className="max-w-5xl mx-auto text-center mt-20">
+        <div
+          className="max-w-5xl mx-auto text-center mt-20"
+          aria-labelledby="devis-local-title"
+        >
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2
+            id="devis-local-title"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          >
             Devis GPS pour véhicules et flottes à Kinshasa
           </h2>
 
