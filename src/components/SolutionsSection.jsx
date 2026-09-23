@@ -23,7 +23,7 @@ function SolutionsSection() {
 
         <div className="text-center mb-20">
 
-          <span className="text-red-600 uppercase tracking-[4px] font-bold">
+          <span className="text-red-700 uppercase tracking-[4px] font-bold">
             Nos Solutions
           </span>
 
@@ -91,11 +91,11 @@ function SolutionsSection() {
               🚗
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               GPS pour particuliers
             </h3>
 
-            <p className="text-gray-600 mb-5 leading-7">
+            <p className="text-gray-700 mb-5 leading-7">
               Gardez votre véhicule sous surveillance grâce à une solution
               GPS permettant de suivre sa position et ses déplacements
               à Kinshasa et en RDC.
@@ -133,11 +133,11 @@ function SolutionsSection() {
               🏢
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               Gestion de flotte pour entreprises
             </h3>
 
-            <p className="text-gray-600 mb-5 leading-7">
+            <p className="text-gray-700 mb-5 leading-7">
               Centralisez le suivi de vos véhicules et de vos opérations
               avec une plateforme de gestion de flotte conçue pour améliorer
               le contrôle, la visibilité et les performances.
@@ -175,11 +175,11 @@ function SolutionsSection() {
               🚚
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               Transport et logistique
             </h3>
 
-            <p className="text-gray-600 mb-5 leading-7">
+            <p className="text-gray-700 mb-5 leading-7">
               Suivez vos véhicules de transport, améliorez les itinéraires
               et utilisez les données GPS pour optimiser vos opérations
               logistiques à Kinshasa et à travers la RDC.
@@ -217,11 +217,11 @@ function SolutionsSection() {
               📊
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               Pilotage et analyse de flotte
             </h3>
 
-            <p className="text-gray-600 mb-5 leading-7">
+            <p className="text-gray-700 mb-5 leading-7">
               Exploitez les données télématiques de votre flotte grâce à
               des tableaux de bord, rapports et indicateurs permettant
               de suivre les performances de vos opérations.
@@ -241,15 +241,19 @@ function SolutionsSection() {
         {/* FONCTIONNALITÉS PRINCIPALES */}
         {/* ================================= */}
 
-        <div className="mt-24">
+        <div
+          className="mt-24"
+          aria-labelledby="solutions-features-title"
+        >
 
           <div className="text-center mb-16">
 
-            <span className="text-red-600 uppercase tracking-[4px] font-bold">
+            <span className="text-red-700 uppercase tracking-[4px] font-bold">
               Technologie HESABU
             </span>
 
             <h2
+              id="solutions-features-title"
               className="
                 text-3xl
                 sm:text-4xl
@@ -305,11 +309,11 @@ function SolutionsSection() {
                 📍
               </div>
 
-              <h3 className="text-2xl font-bold mb-3">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Géolocalisation GPS en temps réel
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-700 leading-7">
                 Visualisez la position de vos véhicules sur une carte,
                 consultez leurs déplacements et suivez votre flotte
                 en temps réel.
@@ -340,11 +344,11 @@ function SolutionsSection() {
                 ⛽
               </div>
 
-              <h3 className="text-2xl font-bold mb-3">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Suivi et contrôle du carburant
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-700 leading-7">
                 Surveillez la consommation de carburant, identifiez
                 les variations inhabituelles et disposez de données
                 pour mieux maîtriser les coûts de votre flotte.
@@ -375,11 +379,11 @@ function SolutionsSection() {
                 🛑
               </div>
 
-              <h3 className="text-2xl font-bold mb-3">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Sécurité et immobilisation à distance
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-700 leading-7">
                 Selon l’équipement installé, certaines solutions permettent
                 de renforcer la protection du véhicule grâce à des fonctions
                 de sécurité et d’immobilisation contrôlée à distance.
@@ -410,11 +414,11 @@ function SolutionsSection() {
                 🔔
               </div>
 
-              <h3 className="text-2xl font-bold mb-3">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Alertes GPS intelligentes
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-700 leading-7">
                 Recevez des notifications concernant les excès de vitesse,
                 sorties de zone, mouvements inhabituels ou autres événements
                 définis pour votre flotte.
@@ -429,9 +433,15 @@ function SolutionsSection() {
         {/* BLOC SEO COMPLÉMENTAIRE */}
         {/* ================================= */}
 
-        <div className="mt-24 max-w-5xl mx-auto text-center">
+        <div
+          className="mt-24 max-w-5xl mx-auto text-center"
+          aria-labelledby="solutions-local-title"
+        >
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2
+            id="solutions-local-title"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          >
             Des solutions adaptées aux réalités de Kinshasa et de la RDC
           </h2>
 
@@ -452,7 +462,7 @@ function SolutionsSection() {
         <div
           className="
             mt-24
-            bg-red-600
+            bg-red-700
             text-white
             rounded-3xl
             p-12
@@ -473,7 +483,7 @@ function SolutionsSection() {
                 24/7
               </p>
 
-              <p className="mt-2">
+              <p className="mt-2 text-red-50">
                 Surveillance continue
               </p>
             </div>
@@ -490,7 +500,7 @@ function SolutionsSection() {
                 GPS
               </p>
 
-              <p className="mt-2">
+              <p className="mt-2 text-red-50">
                 Géolocalisation en temps réel
               </p>
             </div>
@@ -507,7 +517,7 @@ function SolutionsSection() {
                 IoT
               </p>
 
-              <p className="mt-2">
+              <p className="mt-2 text-red-50">
                 Technologies connectées
               </p>
             </div>
@@ -525,7 +535,7 @@ function SolutionsSection() {
                 📈
               </p>
 
-              <p className="mt-2">
+              <p className="mt-2 text-red-50">
                 Optimisation des performances
               </p>
             </div>
