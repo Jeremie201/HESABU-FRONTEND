@@ -131,9 +131,9 @@ function Footer() {
             <div className="space-y-3 text-gray-300">
 
               <p>
-                📍 11A3, Avenue Golf,
-                Anciennes Galeries Présidentielles,
-                Kinshasa Gombe, RDC
+                📍 Boulevard du 30 Juin, 
+                Anciennes Galeries Présidentielles, 
+                11A3, Kinshasa Gombe
               </p>
 
               <p>
