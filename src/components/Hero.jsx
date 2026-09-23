@@ -12,6 +12,7 @@ function Hero() {
         text-white
         overflow-hidden
       "
+      aria-labelledby="home-hero-title"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
 
@@ -21,11 +22,12 @@ function Hero() {
           {/* TEXTE */}
           <div>
 
-            <p className="uppercase tracking-[6px] text-red-200 mb-6">
+            <p className="uppercase tracking-[6px] text-red-100 mb-6">
               GPS • IoT • Gestion de flotte • Télématique
             </p>
 
             <h1
+              id="home-hero-title"
               className="
                 text-4xl
                 sm:text-5xl
@@ -46,7 +48,7 @@ function Hero() {
                 mt-8
                 text-lg
                 md:text-xl
-                text-gray-200
+                text-gray-100
                 leading-7
                 md:leading-8
               "
@@ -73,13 +75,16 @@ function Hero() {
                   w-full
                   sm:w-auto
                   bg-white
-                  text-red-600
+                  text-red-700
                   px-8
                   py-4
                   rounded-xl
                   font-bold
                   shadow-xl
                   hover:scale-105
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   transition
                   duration-300
                 "
@@ -99,7 +104,10 @@ function Hero() {
                   rounded-xl
                   font-bold
                   hover:bg-white
-                  hover:text-red-600
+                  hover:text-red-700
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-white/60
                   transition
                   duration-300
                 "
@@ -126,7 +134,7 @@ function Hero() {
                   +50
                 </p>
 
-                <p className="text-gray-200">
+                <p className="text-gray-100">
                   Véhicules suivis
                 </p>
               </div>
@@ -136,7 +144,7 @@ function Hero() {
                   24/7
                 </p>
 
-                <p className="text-gray-200">
+                <p className="text-gray-100">
                   Surveillance
                 </p>
               </div>
@@ -146,7 +154,7 @@ function Hero() {
                   99%
                 </p>
 
-                <p className="text-gray-200">
+                <p className="text-gray-100">
                   Satisfaction
                 </p>
               </div>
@@ -159,6 +167,8 @@ function Hero() {
             <img
               src={affiche}
               alt="Solutions GPS et gestion de flotte HESABU à Kinshasa en RDC"
+              fetchPriority="high"
+              decoding="async"
               className="
                 w-full
                 max-w-2xl
@@ -190,10 +200,16 @@ function Hero() {
               border
               border-white/20
               hover:bg-white/20
+              focus:outline-none
+              focus:ring-4
+              focus:ring-white/50
               transition
             "
           >
-            <div className="text-4xl mb-4">
+            <div
+              className="text-4xl mb-4"
+              aria-hidden="true"
+            >
               🛰️
             </div>
 
@@ -218,10 +234,16 @@ function Hero() {
               border
               border-white/20
               hover:bg-white/20
+              focus:outline-none
+              focus:ring-4
+              focus:ring-white/50
               transition
             "
           >
-            <div className="text-4xl mb-4">
+            <div
+              className="text-4xl mb-4"
+              aria-hidden="true"
+            >
               🚚
             </div>
 
@@ -246,10 +268,16 @@ function Hero() {
               border
               border-white/20
               hover:bg-white/20
+              focus:outline-none
+              focus:ring-4
+              focus:ring-white/50
               transition
             "
           >
-            <div className="text-4xl mb-4">
+            <div
+              className="text-4xl mb-4"
+              aria-hidden="true"
+            >
               🏢
             </div>
 
@@ -274,10 +302,16 @@ function Hero() {
               border
               border-white/20
               hover:bg-white/20
+              focus:outline-none
+              focus:ring-4
+              focus:ring-white/50
               transition
             "
           >
-            <div className="text-4xl mb-4">
+            <div
+              className="text-4xl mb-4"
+              aria-hidden="true"
+            >
               📞
             </div>
 
