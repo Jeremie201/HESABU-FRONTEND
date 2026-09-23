@@ -3,7 +3,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { FaWhatsapp } from "react-icons/fa";
 
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 function ContactSection() {
   const [loading, setLoading] = useState(false);
