@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 import { Link } from "react-router-dom";
 
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 import SEO from "../components/SEO";
 
