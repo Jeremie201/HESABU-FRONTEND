@@ -41,7 +41,7 @@ export default function SEO({
       "@type": "PostalAddress",
 
       streetAddress:
-        "11A3 Avenue Golf, Anciennes Galeries Présidentielles, Gombe",
+        "Boulevard du 30 Juin, Anciennes Galeries Présidentielles, 11A3, Gombe",
 
       addressLocality: "Kinshasa",
 
