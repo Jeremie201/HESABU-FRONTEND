@@ -14,24 +14,6 @@ import CategoryCard from "../components/CategoryCard";
 
 function Ressources() {
 
-  /*
-  |--------------------------------------------------------------------------
-  | NORMALISATION DES SLUGS
-  |--------------------------------------------------------------------------
-  |
-  | Corrige automatiquement :
-  |
-  | gestion-flotte
-  | /gestion-flotte
-  | ressources/gestion-flotte
-  | /ressources/gestion-flotte
-  |
-  | vers :
-  |
-  | gestion-flotte
-  |
-  */
-
   const normalizedArticles = articles.map((article) => ({
     ...article,
 
@@ -54,9 +36,7 @@ function Ressources() {
 
       <main>
 
-        {/* ================================= */}
         {/* HERO */}
-        {/* ================================= */}
 
         <section
           className="
@@ -72,7 +52,7 @@ function Ressources() {
         >
           <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
 
-            <span className="uppercase tracking-[5px] text-red-200 font-semibold">
+            <span className="uppercase tracking-[5px] text-red-100 font-semibold">
               HESABU RESSOURCES
             </span>
 
@@ -111,9 +91,7 @@ function Ressources() {
           </div>
         </section>
 
-        {/* ================================= */}
         {/* THÉMATIQUES PRINCIPALES */}
-        {/* ================================= */}
 
         <section
           className="relative py-24 overflow-hidden"
@@ -126,14 +104,13 @@ function Ressources() {
           aria-labelledby="themes-title"
         >
 
-          {/* Overlay */}
           <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
 
             <div className="text-center mb-16">
 
-              <span className="text-red-600 uppercase font-bold tracking-[4px]">
+              <span className="text-red-700 uppercase font-bold tracking-[4px]">
                 Nos expertises
               </span>
 
@@ -154,9 +131,9 @@ function Ressources() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              {/* GESTION DE FLOTTE */}
               <Link
                 to="/ressources/gestion-flotte"
+                aria-label="Lire le guide sur la gestion de flotte"
                 className="
                   group
                   bg-white/90
@@ -166,6 +143,9 @@ function Ressources() {
                   p-8
                   hover:-translate-y-2
                   hover:shadow-2xl
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   transition
                   duration-300
                 "
@@ -177,24 +157,24 @@ function Ressources() {
                   🚚
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-600 transition">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-700 transition">
                   Gestion de flotte
                 </h3>
 
-                <p className="text-gray-600 leading-7">
+                <p className="text-gray-700 leading-7">
                   Découvrez comment suivre vos véhicules, analyser leurs
                   déplacements et améliorer la gestion quotidienne de votre
                   flotte grâce au GPS et à la télématique.
                 </p>
 
-                <span className="inline-block mt-6 text-red-600 font-semibold">
+                <span className="inline-block mt-6 text-red-700 font-semibold">
                   Lire le guide →
                 </span>
               </Link>
 
-              {/* CARBURANT */}
               <Link
                 to="/ressources/reduire-couts-gps-sonde-carburant"
+                aria-label="Lire le guide sur le suivi et le contrôle du carburant"
                 className="
                   group
                   bg-white/90
@@ -204,6 +184,9 @@ function Ressources() {
                   p-8
                   hover:-translate-y-2
                   hover:shadow-2xl
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   transition
                   duration-300
                 "
@@ -215,24 +198,24 @@ function Ressources() {
                   ⛽
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-600 transition">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-700 transition">
                   Suivi et contrôle du carburant
                 </h3>
 
-                <p className="text-gray-600 leading-7">
+                <p className="text-gray-700 leading-7">
                   Comprenez comment surveiller la consommation, identifier
                   les anomalies et mieux maîtriser les dépenses de carburant
                   de votre flotte.
                 </p>
 
-                <span className="inline-block mt-6 text-red-600 font-semibold">
+                <span className="inline-block mt-6 text-red-700 font-semibold">
                   Lire le guide →
                 </span>
               </Link>
 
-              {/* SÉCURITÉ */}
               <Link
                 to="/ressources/securite-anti-vol"
+                aria-label="Lire le guide sur la sécurité des véhicules"
                 className="
                   group
                   bg-white/90
@@ -242,6 +225,9 @@ function Ressources() {
                   p-8
                   hover:-translate-y-2
                   hover:shadow-2xl
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   transition
                   duration-300
                 "
@@ -253,24 +239,24 @@ function Ressources() {
                   🛡️
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-600 transition">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-700 transition">
                   Sécurité des véhicules
                 </h3>
 
-                <p className="text-gray-600 leading-7">
+                <p className="text-gray-700 leading-7">
                   Découvrez les solutions de géolocalisation, d’alertes
                   intelligentes et de surveillance permettant de mieux
                   protéger vos véhicules et vos actifs.
                 </p>
 
-                <span className="inline-block mt-6 text-red-600 font-semibold">
+                <span className="inline-block mt-6 text-red-700 font-semibold">
                   Lire le guide →
                 </span>
               </Link>
 
-              {/* IOT */}
               <Link
                 to="/ressources/iot-gestion-flotte"
+                aria-label="Lire le guide sur l’IoT et la télématique"
                 className="
                   group
                   bg-white/90
@@ -280,6 +266,9 @@ function Ressources() {
                   p-8
                   hover:-translate-y-2
                   hover:shadow-2xl
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   transition
                   duration-300
                 "
@@ -291,17 +280,17 @@ function Ressources() {
                   📡
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-600 transition">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-red-700 transition">
                   IoT et télématique
                 </h3>
 
-                <p className="text-gray-600 leading-7">
+                <p className="text-gray-700 leading-7">
                   Explorez les technologies connectées, les capteurs et les
                   systèmes télématiques utilisés pour améliorer le suivi
                   et la gestion des opérations.
                 </p>
 
-                <span className="inline-block mt-6 text-red-600 font-semibold">
+                <span className="inline-block mt-6 text-red-700 font-semibold">
                   Lire le guide →
                 </span>
               </Link>
@@ -311,9 +300,7 @@ function Ressources() {
           </div>
         </section>
 
-        {/* ================================= */}
         {/* ARTICLE À LA UNE */}
-        {/* ================================= */}
 
         {normalizedArticles.length > 0 && (
           <FeaturedArticle
@@ -321,9 +308,7 @@ function Ressources() {
           />
         )}
 
-        {/* ================================= */}
         {/* CATÉGORIES */}
-        {/* ================================= */}
 
         <section
           className="py-24 bg-gray-50"
@@ -333,7 +318,7 @@ function Ressources() {
 
             <div className="text-center mb-16">
 
-              <span className="uppercase tracking-[4px] text-red-600 font-semibold">
+              <span className="uppercase tracking-[4px] text-red-700 font-semibold">
                 Explorer
               </span>
 
@@ -344,7 +329,7 @@ function Ressources() {
                 Explorez nos domaines d’expertise
               </h2>
 
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-8">
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
                 Retrouvez nos guides sur la géolocalisation GPS, la gestion
                 de flotte, la consommation de carburant, la sécurité des
                 véhicules, la télématique et les objets connectés.
@@ -394,9 +379,7 @@ function Ressources() {
           </div>
         </section>
 
-        {/* ================================= */}
         {/* ARTICLES */}
-        {/* ================================= */}
 
         <section
           className="py-24 bg-white"
@@ -406,7 +389,7 @@ function Ressources() {
 
             <div className="text-center mb-16">
 
-              <span className="uppercase tracking-[4px] text-red-600 font-semibold">
+              <span className="uppercase tracking-[4px] text-red-700 font-semibold">
                 Conseils & Guides
               </span>
 
@@ -417,7 +400,7 @@ function Ressources() {
                 Nos articles sur le GPS et la gestion de flotte
               </h2>
 
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-8">
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
                 Découvrez des contenus pratiques pour mieux comprendre les
                 solutions GPS, la gestion de flotte, la sécurité des véhicules,
                 le carburant, la télématique et les technologies IoT en RDC.
@@ -439,7 +422,7 @@ function Ressources() {
 
               </div>
             ) : (
-              <p className="text-center text-gray-600">
+              <p className="text-center text-gray-700">
                 De nouveaux articles seront bientôt disponibles.
               </p>
             )}
@@ -447,15 +430,19 @@ function Ressources() {
           </div>
         </section>
 
-        {/* ================================= */}
         {/* BLOC SEO */}
-        {/* ================================= */}
 
-        <section className="py-20 bg-gray-50">
+        <section
+          className="py-20 bg-gray-50"
+          aria-labelledby="ressources-seo-title"
+        >
 
           <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2
+              id="ressources-seo-title"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+            >
               Comprendre les technologies GPS à Kinshasa et en RDC
             </h2>
 
@@ -473,9 +460,7 @@ function Ressources() {
 
         </section>
 
-        {/* ================================= */}
         {/* CTA */}
-        {/* ================================= */}
 
         <section
           className="bg-gradient-to-r from-red-700 to-black text-white py-24"
@@ -505,7 +490,7 @@ function Ressources() {
               className="
                 inline-block
                 bg-white
-                text-red-600
+                text-red-700
                 px-10
                 py-4
                 rounded-xl
@@ -513,6 +498,9 @@ function Ressources() {
                 text-lg
                 shadow-xl
                 hover:scale-105
+                focus:outline-none
+                focus:ring-4
+                focus:ring-red-300
                 transition
                 duration-300
               "
