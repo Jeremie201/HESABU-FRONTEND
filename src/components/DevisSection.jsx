@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-import mapBg from "../assets/map-bg.png";
+import mapBg from "../assets/map-bg.webp";
 
 function DevisSection() {
   const [loading, setLoading] = useState(false);
