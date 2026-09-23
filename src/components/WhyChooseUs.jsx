@@ -20,18 +20,25 @@ function WhyChooseUs() {
         {/* TITRE */}
         <div className="text-center mb-20">
 
-          <span className="text-red-600 uppercase font-bold tracking-[4px]">
+          <span className="text-red-700 uppercase font-bold tracking-[4px]">
             Pourquoi choisir HESABU ?
           </span>
 
           <h2
             id="why-hesabu-title"
-            className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              text-gray-900
+              mt-4
+              mb-6
+            "
           >
             Une gestion de flotte GPS plus intelligente à Kinshasa et en RDC
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-8">
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-8">
             Les solutions GPS, télématiques et IoT de HESABU permettent aux
             entreprises de Kinshasa et de toute la République Démocratique du Congo
             de suivre leurs véhicules en temps réel, réduire leurs coûts
@@ -45,7 +52,17 @@ function WhyChooseUs() {
         <div className="grid lg:grid-cols-2 gap-8">
 
           {/* RÉDUCTION DES COÛTS */}
-          <article className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-3xl p-10 shadow-xl">
+          <article
+            className="
+              bg-gradient-to-r
+              from-red-700
+              to-red-800
+              text-white
+              rounded-3xl
+              p-10
+              shadow-xl
+            "
+          >
 
             <div
               className="text-6xl mb-6"
@@ -58,7 +75,7 @@ function WhyChooseUs() {
               Réduction des coûts de votre flotte
             </h3>
 
-            <p className="text-lg leading-8">
+            <p className="text-lg leading-8 text-red-50">
               Analysez les déplacements de vos véhicules, réduisez
               les trajets inutiles, surveillez la consommation de carburant
               et limitez les dépenses liées aux pertes, aux abus
@@ -77,7 +94,7 @@ function WhyChooseUs() {
               🚀
             </div>
 
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Productivité et optimisation des trajets
             </h3>
 
@@ -100,7 +117,7 @@ function WhyChooseUs() {
               🔒
             </div>
 
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Sécurité et géolocalisation des véhicules
             </h3>
 
@@ -114,7 +131,17 @@ function WhyChooseUs() {
           </article>
 
           {/* DONNÉES */}
-          <article className="bg-gradient-to-r from-black to-red-700 text-white rounded-3xl p-10 shadow-xl">
+          <article
+            className="
+              bg-gradient-to-r
+              from-black
+              to-red-800
+              text-white
+              rounded-3xl
+              p-10
+              shadow-xl
+            "
+          >
 
             <div
               className="text-6xl mb-6"
@@ -127,7 +154,7 @@ function WhyChooseUs() {
               Données et décisions en temps réel
             </h3>
 
-            <p className="text-lg leading-8">
+            <p className="text-lg leading-8 text-gray-100">
               Consultez vos tableaux de bord, rapports automatiques
               et indicateurs de performance afin de mieux comprendre
               l’utilisation de votre flotte et prendre des décisions
@@ -140,17 +167,23 @@ function WhyChooseUs() {
 
         {/* STATISTIQUES */}
         <div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-10 mt-24"
+          className="
+            grid
+            grid-cols-2
+            lg:grid-cols-4
+            gap-10
+            mt-24
+          "
           aria-label="Quelques chiffres sur les solutions HESABU"
         >
 
           <div className="text-center">
 
-            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-700">
               24/7
             </p>
 
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               Surveillance continue
             </p>
 
@@ -158,11 +191,11 @@ function WhyChooseUs() {
 
           <div className="text-center">
 
-            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-700">
               100%
             </p>
 
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               Géolocalisation en temps réel
             </p>
 
@@ -170,11 +203,11 @@ function WhyChooseUs() {
 
           <div className="text-center">
 
-            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-700">
               +50
             </p>
 
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               Véhicules connectés
             </p>
 
@@ -182,11 +215,11 @@ function WhyChooseUs() {
 
           <div className="text-center">
 
-            <p className="text-5xl md:text-6xl font-extrabold text-red-600">
+            <p className="text-5xl md:text-6xl font-extrabold text-red-700">
               99%
             </p>
 
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               Satisfaction client
             </p>
 
