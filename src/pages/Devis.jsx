@@ -16,7 +16,9 @@ function Devis() {
 
       <Navbar />
 
-      <DevisSection />
+      <main>
+        <DevisSection />
+      </main>
 
       <Footer />
     </>
