@@ -68,18 +68,13 @@ function ContactSection() {
         }}
         aria-labelledby="contact-title"
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px]"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
 
-          {/* ================================= */}
-          {/* TITRE PRINCIPAL */}
-          {/* ================================= */}
-
           <div className="text-center mb-14">
 
-            <span className="text-red-600 uppercase font-bold tracking-[4px]">
+            <span className="text-red-700 uppercase font-bold tracking-[4px]">
               HESABU SARLU
             </span>
 
@@ -111,13 +106,8 @@ function ContactSection() {
 
           </div>
 
-          {/* ================================= */}
-          {/* COORDONNÉES */}
-          {/* ================================= */}
-
           <div className="grid md:grid-cols-3 gap-6 mb-12">
 
-            {/* TÉLÉPHONE */}
             <article
               className="
                 bg-white/90
@@ -143,13 +133,20 @@ function ContactSection() {
 
               <a
                 href="tel:+243839573532"
-                className="text-red-600 font-semibold hover:underline"
+                className="
+                  text-red-700
+                  font-semibold
+                  hover:underline
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-red-300
+                  rounded
+                "
               >
                 +243 839 573 532
               </a>
             </article>
 
-            {/* EMAIL */}
             <article
               className="
                 bg-white/90
@@ -175,13 +172,21 @@ function ContactSection() {
 
               <a
                 href="mailto:iot@hesaburdc.com"
-                className="text-red-600 font-semibold hover:underline break-all"
+                className="
+                  text-red-700
+                  font-semibold
+                  hover:underline
+                  break-all
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-red-300
+                  rounded
+                "
               >
                 iot@hesaburdc.com
               </a>
             </article>
 
-            {/* ADRESSE */}
             <article
               className="
                 bg-white/90
@@ -218,10 +223,6 @@ function ContactSection() {
 
           </div>
 
-          {/* ================================= */}
-          {/* WHATSAPP */}
-          {/* ================================= */}
-
           <div
             className="
               bg-green-50
@@ -238,7 +239,7 @@ function ContactSection() {
 
               <FaWhatsapp
                 size={30}
-                className="text-green-600"
+                className="text-green-700"
                 aria-hidden="true"
               />
 
@@ -257,13 +258,18 @@ function ContactSection() {
               href="https://wa.me/243839573532"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contacter HESABU sur WhatsApp dans un nouvel onglet"
               className="
                 inline-flex
                 items-center
                 gap-2
-                text-green-700
+                text-green-800
                 font-bold
                 hover:underline
+                focus:outline-none
+                focus:ring-2
+                focus:ring-green-400
+                rounded
               "
             >
               <FaWhatsapp aria-hidden="true" />
@@ -272,19 +278,24 @@ function ContactSection() {
             </a>
           </div>
 
-          {/* ================================= */}
-          {/* FORMULAIRE */}
-          {/* ================================= */}
-
-          <div className="max-w-4xl mx-auto">
+          <div
+            className="max-w-4xl mx-auto"
+            aria-labelledby="contact-form-title"
+          >
 
             <div className="text-center mb-8">
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2
+                id="contact-form-title"
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              >
                 Parlez-nous de votre projet
               </h2>
 
-              <p className="text-lg text-gray-700 leading-8">
+              <p
+                id="contact-form-description"
+                className="text-lg text-gray-700 leading-8"
+              >
                 Installation GPS, gestion de flotte, suivi de véhicules,
                 sécurité, télématique ou IoT : décrivez votre besoin
                 et notre équipe vous répondra.
@@ -294,6 +305,9 @@ function ContactSection() {
 
             <form
               onSubmit={envoyer}
+              aria-labelledby="contact-form-title"
+              aria-describedby="contact-form-description"
+              aria-busy={loading}
               className="
                 bg-white/95
                 backdrop-blur-md
@@ -307,7 +321,6 @@ function ContactSection() {
               "
             >
 
-              {/* NOM */}
               <div>
                 <label
                   htmlFor="nom"
@@ -327,18 +340,20 @@ function ContactSection() {
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                   "
                   required
                 />
               </div>
 
-              {/* ENTREPRISE */}
               <div>
                 <label
                   htmlFor="entreprise"
@@ -358,17 +373,19 @@ function ContactSection() {
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                   "
                 />
               </div>
 
-              {/* EMAIL */}
               <div>
                 <label
                   htmlFor="email"
@@ -388,18 +405,20 @@ function ContactSection() {
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                   "
                   required
                 />
               </div>
 
-              {/* TÉLÉPHONE */}
               <div>
                 <label
                   htmlFor="telephone"
@@ -416,21 +435,24 @@ function ContactSection() {
                   value={form.telephone}
                   onChange={handleChange}
                   autoComplete="tel"
+                  inputMode="tel"
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                   "
                   required
                 />
               </div>
 
-              {/* SUJET */}
               <div>
                 <label
                   htmlFor="sujet"
@@ -449,18 +471,20 @@ function ContactSection() {
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                   "
                   required
                 />
               </div>
 
-              {/* MESSAGE */}
               <div>
                 <label
                   htmlFor="message"
@@ -479,23 +503,22 @@ function ContactSection() {
                   className="
                     w-full
                     border
-                    border-gray-300
+                    border-gray-400
                     rounded-xl
                     p-4
+                    text-gray-900
+                    placeholder:text-gray-500
                     focus:outline-none
-                    focus:ring-2
-                    focus:ring-red-500
+                    focus:ring-4
+                    focus:ring-red-300
+                    focus:border-red-700
                     resize-y
                   "
                   required
                 />
               </div>
 
-              {/* ================================= */}
-              {/* RÉCAPITULATIF */}
-              {/* ================================= */}
-
-              <div className="bg-gray-50 border rounded-2xl p-5">
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
 
                 <h3 className="font-bold text-lg mb-4 text-gray-900">
                   Récapitulatif de votre message
@@ -532,13 +555,12 @@ function ContactSection() {
 
               </div>
 
-              {/* BOUTON */}
               <button
                 type="submit"
                 disabled={loading}
                 className="
-                  bg-red-600
-                  hover:bg-red-700
+                  bg-red-700
+                  hover:bg-red-800
                   text-white
                   px-8
                   py-4
@@ -546,6 +568,9 @@ function ContactSection() {
                   font-bold
                   w-full
                   transition
+                  focus:outline-none
+                  focus:ring-4
+                  focus:ring-red-300
                   disabled:opacity-50
                   disabled:cursor-not-allowed
                 "
@@ -559,13 +584,15 @@ function ContactSection() {
 
           </div>
 
-          {/* ================================= */}
-          {/* TEXTE LOCAL / SEO */}
-          {/* ================================= */}
+          <div
+            className="max-w-4xl mx-auto text-center mt-20"
+            aria-labelledby="contact-local-title"
+          >
 
-          <div className="max-w-4xl mx-auto text-center mt-20">
-
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2
+              id="contact-local-title"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+            >
               Solutions GPS et gestion de flotte à Kinshasa
             </h2>
 
@@ -583,10 +610,6 @@ function ContactSection() {
 
       </section>
 
-      {/* ================================= */}
-      {/* BOUTON WHATSAPP FLOTTANT */}
-      {/* ================================= */}
-
       <a
         href="https://wa.me/243839573532"
         target="_blank"
@@ -595,8 +618,8 @@ function ContactSection() {
           fixed
           bottom-6
           right-6
-          bg-green-500
-          hover:bg-green-600
+          bg-green-700
+          hover:bg-green-800
           text-white
           p-4
           rounded-full
@@ -604,8 +627,11 @@ function ContactSection() {
           z-50
           transition
           hover:scale-105
+          focus:outline-none
+          focus:ring-4
+          focus:ring-green-300
         "
-        aria-label="Contacter HESABU sur WhatsApp"
+        aria-label="Contacter HESABU sur WhatsApp dans un nouvel onglet"
       >
         <FaWhatsapp
           size={34}
