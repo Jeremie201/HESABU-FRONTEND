@@ -16,7 +16,9 @@ function Contact() {
 
       <Navbar />
 
-      <ContactSection />
+      <main>
+        <ContactSection />
+      </main>
 
       <Footer />
     </>
